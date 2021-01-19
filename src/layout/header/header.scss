@@ -1,0 +1,44 @@
+.container-fluid-home {
+  background: #fff;
+  border-bottom: 5px solid #333;
+  width: 100vw;
+  max-height: 120px;
+  .container-menu {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .container-logo a {
+    color: rgb(219, 2, 56);
+    & svg {
+      transform: scale(0.8)
+    }
+  }
+  .box-menu ul {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 100px;
+    
+    .list-menu {
+      min-width: 150px;
+      border-bottom: 2px solid #fff;
+      text-align: center;
+      padding-bottom: 5px;
+      text-decoration: none;
+      color: #333;
+      cursor: pointer;
+      & li {
+        text-decoration: none;
+        color: #333;
+      }
+      &:hover, &.selected {
+        border-bottom: 2px solid rgb(219, 2, 56);
+        & li {
+          color: rgb(219, 2, 56);
+        }
+      }
+    }
+  }
+}
