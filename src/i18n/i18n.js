@@ -19,7 +19,7 @@ i18n
     resources: resources,
     lng: "es-ES",
     keySeparator: '.',
-    fallbackLng: ['es-ES', 'ca-ES'],
+    fallbackLng: ['es-ES', 'eu-ES'],
     // debug only when not in production
     debug: process.env.NODE_ENV !== 'production',
     ns: ['translations'],

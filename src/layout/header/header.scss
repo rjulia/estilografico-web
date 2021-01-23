@@ -1,8 +1,8 @@
 @import '../../scss/variables';
 
-.container-fluid-home {
+.container-fluid-header-home {
   background: $white;
-  border-bottom: 5px solid #333;
+  border-bottom: 20px solid $secondary;
   width: 100vw;
   max-height: 120px;
   .container-menu {
