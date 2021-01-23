@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow:400,600|Orbitron:400,600,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @import './mediaqueries';
 // fonts
-$title: 'Orbitron',
-sans-serif;
-$text: 'Barlow',
-sans-serif;
+$title: 'Roboto', sans-serif;
+
+$text: 'Roboto', sans-serif;
+
 
 //metrics
 
-$container: 1140px;
+$container: 1360px;
 
 
-$main_color: #10ace4;
-$grey_light:#F5F5F5;
-$grey_middle: #D8D8D8;
-$grey_dark: #8F8F8F;
-$text_color:#222222;
+$main: #bb0e0a;
+$secondary: #edebe3;
+$tercery: #380e0a;
+$tercery_color: #380e0a;
+$grey_dark: #413129;
+$orange: #fab079;
+$text_color: #380e0a;
 $white: #fff;
 $black: #000;
-$alert:#D80027;
-$yellow:#FFDA44;
 $light-grey: #f2f2f2;
 
 // SIZES
@@ -34,13 +34,17 @@ $card-text: 10;
 $cookies: 1000;
 
 
-$grid-breakpoints: (xs: 0,
+$grid-breakpoints:(
+  xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1270px) !default;
+  xl: 1140px
+) !default;
 
-$container-max-widths: (sm: 540px,
+$container-max-widths: (
+  sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1300px) !default;
+  xl: 1300px
+) !default;
