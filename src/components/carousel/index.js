@@ -1,21 +1,49 @@
 import React from "react";
 import Slider from "react-slick";
+import { ReactComponent as ArrowLeft } from '../../assets/icons/left-chevron.svg';
+import { ReactComponent as ArrowRight } from '../../assets/icons/right-chevron.svg';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import './carousel.scss'
 
-function CenterMode({images}) {
-  console.log(images)
+function NextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      className="arrow nextArrow"
+      onClick={onClick}
+    >
+      <ArrowRight />
+    </div>
+  );
+}
+
+function PrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      className="arrow prevArrow"
+      onClick={onClick}
+    >
+      <ArrowLeft/>
+    </div>
+  );
+}
+
+function Carousel({images}) {
+
   const settings = {
     dots: false,
     dotsClass: "slick-dots slick-dots-slider",
     className: "center",
-    // centerMode: true,
+    // Carousel: true,
     infinite: true,
     centerPadding: "0px",
     slidesToShow: 1,
     speed: 500,
     swipeToSlide: true,
-    arrows: true
+    arrows: true,
+    nextArrow: <NextArrow className="arrow right" />,
+    prevArrow: <PrevArrow className="arrow right"/>
   };
   return (
     <div className="box-carousel">
@@ -43,4 +71,4 @@ function CenterMode({images}) {
   
 }
 
-export default CenterMode
+export default Carousel

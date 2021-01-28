@@ -36,7 +36,7 @@ const Home = () => {
       <div className="container-fluid-home-block block-1">
         <div>
           <h2>Somos un estudio de <b>diseño</b> y <b>publicidad</b>.
-          Llevamos 30 años ofreciendo servicios de <b>Comunicación</b>, <b>Diseño gráfico</b> y<b>Publicidad a medida</b> .</h2>
+          Llevamos 30 años ofreciendo servicios de <b>Comunicación</b>, <b>Diseño gráfico</b> y<b> Publicidad a medida</b> .</h2>
         </div>
       </div>
       <div className="container-fluid-home-block block-2">
@@ -63,8 +63,8 @@ const Home = () => {
           Fotografía, Video, Catálogo...</h2>
         </div>
       </div>
-      <div>
-        <div>
+      <div className="container-home-projects">
+        <div className="box-home-projects">
           <h2>TRABAJOS QUE QUEREMOS MOSTRARTE</h2>
         </div>
         {

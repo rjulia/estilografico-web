@@ -36,3 +36,18 @@
     font-family: $text;
   }
 }
+.container-home-projects {
+  .box-home-projects {
+    width: 100%;
+    height:230px;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    & h2 {
+      font-size: 60px;
+      color: $tercery_light;
+      font-weight: 300;
+    }
+  }
+}
