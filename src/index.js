@@ -5,6 +5,8 @@ import Router from './router/routing';
 import i18n from "./i18n/i18n";
 import { I18nextProvider } from "react-i18next";
 import reportWebVitals from './reportWebVitals';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,29 +1,38 @@
 import _ from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { getProjects } from '../../api/projects/request'
+import { getCarouselHome } from '../../api/slider/request'
 import logoMarron from '../../assets/images/logo-marron.jpg'
-import { BoxProject } from '../../components'
+import { BoxProject, Carousel, Spinner } from '../../components'
 import './home.scss'
 const Home = () => {
 
   const [loading, setLoading] = useState(false)
   const [projects, setProjects] = useState(false)
+  const [carouselItems, setCarouselItems] = useState(false)
 
 
+  const projectsPromise = getProjects()
+  const carouselPromise = getCarouselHome()
 
   useEffect(() => {
     setLoading(true)
-    getProjects().then((response) => {
-      const items = _.get(response, 'data.projectoCollection.items')
-      console.log(items)
-      setProjects(items)
+    Promise.all([
+      projectsPromise, 
+      carouselPromise
+    ]).then((values) => {
+      console.log(values);
+      setCarouselItems(_.get(values, '[1].data.slideShowHomeCollection.items'))
+      setProjects(_.get(values, '[0].data.projectoCollection.items'))
       setLoading(false)
-    })
+    });
   }, []);
+
+  if (loading) return <Spinner />
 
   return (
     <div className="container-fluid-home">
-      <div>Carousel</div>
+      <Carousel images={carouselItems}/>
       <div className="container-fluid-home-block block-1">
         <div>
           <h2>Somos un estudio de <b>diseño</b> y <b>publicidad</b>.

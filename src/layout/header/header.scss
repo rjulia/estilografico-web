@@ -12,11 +12,23 @@
     align-items: flex-end;
     max-width: $container;
     margin: 0 auto;
+    height: 110px;
+  }
+  .container-logo {
+    height: 110px;
+    width: 300px;
   }
   .container-logo a {
     color: $main;
+    height: 110px;
+    display: flex;
+    flex: 1 1 100%;
+    position: relative;
     & svg {
-      transform: scale(0.8)
+      transform: scale(0.75);
+      position: absolute;
+      left: -40px;
+      top: -6px;
     }
   }
   .box-menu ul {

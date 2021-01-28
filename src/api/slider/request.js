@@ -1,15 +1,15 @@
 import axios from 'axios'
-import { queryProjects } from './queries'
+import { queryCarouselHome } from './queries'
 import { url } from '../../constants'
 
 
-export const getProjects = async () => {
+export const getCarouselHome = async () => {
   try {
     const response = await axios({
       method: 'post',
       url,
       data: {
-        query:queryProjects
+        query:queryCarouselHome
       },
       headers: {
         "Content-Type": "application/json",
