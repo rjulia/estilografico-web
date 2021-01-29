@@ -1,5 +1,16 @@
 @import './scss/variables';
-
+@font-face {
+  font-family: 'Blogger Sans Bold';
+  src: local('Blogger Sans Bold'), url(./assets/fonts/Blogger_Sans-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Blogger Sans Light';
+  src: local('Blogger Sans Bold'), url(./assets/fonts/Blogger_Sans-Light.woff) format('woff');
+}
+@font-face {
+  font-family: 'Blogger Sans Medium';
+  src: local('Blogger Sans Bold'), url(./assets/fonts/Blogger_Sans-Medium.woff) format('woff');
+}
 
 body {
   margin: 0;
