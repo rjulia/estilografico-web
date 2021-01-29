@@ -1,10 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @import './mediaqueries';
+@font-face {
+  font-family: 'Blogger Sans Bold';
+  src: local('Blogger Sans Bold'), url(../assets/fonts/Blogger_Sans-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Blogger Sans Light';
+  src: local('Blogger Sans Bold'), url(../assets/fonts/Blogger_Sans-Light.woff) format('woff');
+}
+@font-face {
+  font-family: 'Blogger Sans Medium';
+  src: local('Blogger Sans Bold'), url(../assets/fonts/Blogger_Sans-Medium.woff) format('woff');
+}
 // fonts
 $title: 'Roboto', sans-serif;
 
 $text: 'Roboto', sans-serif;
-
+$aux: 'Blogger Sans Medium', sans-serif;
+$auxB: 'Blogger Sans Bold', sans-serif;
+$auxL: 'Blogger Sans Light', sans-serif;
 
 //metrics
 
