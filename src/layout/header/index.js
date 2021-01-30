@@ -20,7 +20,7 @@ const Header = () => {
                 Equipo
               </li>
             </NavLink>
-            <NavLink activeClassName="selected" className="list-menu" to="/servicos/initial">
+            <NavLink activeClassName="selected" className="list-menu" to="/servicios/initial">
               <li>
                 Servicios
               </li>
