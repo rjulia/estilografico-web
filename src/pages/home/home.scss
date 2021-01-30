@@ -26,7 +26,7 @@
     min-height: 700px;
   }
   & > div {
-    max-width: 1360px;
+    max-width: $container;
     margin: 0 auto;
     padding: 85px 70px;
   }
@@ -49,6 +49,9 @@
       color: $tercery_light;
       font-weight: 300;
       font-family: $auxB;
+      & span {
+        font-family: $auxL;
+      }
     }
   }
 }

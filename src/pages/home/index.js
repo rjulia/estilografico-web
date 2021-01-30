@@ -65,7 +65,7 @@ const Home = () => {
       </div>
       <div className="container-home-projects">
         <div className="box-home-projects">
-          <h2>TRABAJOS QUE QUEREMOS MOSTRARTE</h2>
+          <h2>TRABAJOS <span>QUE QUEREMOS MOSTRARTE</span></h2>
         </div>
         {
           _.map(projects, (project) => (<BoxProject project={project} key={project.sys.id}/>))
