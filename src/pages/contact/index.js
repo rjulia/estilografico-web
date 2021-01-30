@@ -27,8 +27,8 @@ Estaremos encantados de conocerte. EstÃ¡s muy cerca de contactar con nosotros. Â
           <br />
           <p>info@estilografico.com</p>
           <br />
-          <p>Bidebarrieta, 27 B - Oficina 7</p>
-          <p>20600 Eibar. Gipuzkoa.</p>
+          <p>Bidebarrieta, 27 B - Oficina 7<br />
+          20600 Eibar. Gipuzkoa.</p>
         </div>
         <div className="box-form-contact">
           <Form/>
