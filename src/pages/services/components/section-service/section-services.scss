@@ -1,0 +1,29 @@
+@import '../../../../scss/variables';
+
+.container-section-services {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.content-section-services {
+  width: $container;
+  margin: 0 auto;
+  display: flex;
+}
+
+.colunm-left-section-services {
+  padding-right: 30px;
+  max-width: 820px;
+  
+  h1, h2, h3, h4, h5, h6, p, span {
+    font-family: $text;
+    font-weight: 300;
+  }
+  p {
+    font-size: 24px;
+    line-height:28px;
+  }
+  li {
+    list-style-image: url("../../../../assets/icons/rombo.svg");
+  }
+}

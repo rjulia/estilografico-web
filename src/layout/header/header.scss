@@ -2,6 +2,7 @@
 
 .container-fluid-header-home {
   background: $white;
+  position: relative;
   border-bottom: 20px solid $secondary;
   width: 100vw;
   max-height: 120px;
@@ -38,6 +39,7 @@
     margin-right: 100px;
     
     .list-menu {
+      
       min-width: 150px;
       border-bottom: 2px solid $white;
       text-align: center;
@@ -56,6 +58,25 @@
         & li {
           color: $text_color;
         }
+      }
+      .list-submenus {
+        position:absolute;
+        padding-top: 30px;
+        width: 100vw;
+        height: calc(100vh - 130px);
+        top: 90px;
+        left: 0;
+        display: none;
+        background: transparent;
+        z-index: 100;
+      }
+      &:hover {
+        .list-submenus {
+          display: block;
+        }
+      }
+      .list-submenus:hover {
+        display: block;
       }
     }
   }

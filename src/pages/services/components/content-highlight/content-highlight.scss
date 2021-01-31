@@ -1,0 +1,36 @@
+@import '../../../../scss/variables';
+
+.container-content-highlight {
+  widows: 100%;
+  max-width: 340px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: $secondary;
+
+  .top-quotes {
+    width:100%;
+    height: 50px;
+    color: #dbd6cb;
+    font-size:40px;
+  }
+  
+  .content-quotes {
+    color: $text_color;
+    font-family: $auxL;
+    flex: 1;
+    font-size:36px;
+    line-height:42px;
+    margin: 0;
+    b{
+      font-family: $auxB;
+    }
+  }
+
+  .bottom-quotes {
+    width:100%;
+    height: 50px;
+    color: #dbd6cb
+  }
+}

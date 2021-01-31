@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, Link } from "react-router-dom";
 import { ReactComponent as Logo } from '../../assets/icons/logoClean.svg';
+import MenuServicios from './menu-servicios'
 import './header.scss'
 
 
@@ -20,11 +21,14 @@ const Header = () => {
                 Equipo
               </li>
             </NavLink>
-            <NavLink activeClassName="selected" className="list-menu" to="/servicios/initial">
+            <div className="list-menu">
               <li>
                 Servicios
               </li>
-            </NavLink>
+              <div className="list-submenus">
+                <MenuServicios/>
+              </div>
+            </div>
             <NavLink activeClassName="selected" className="list-menu" to="/contacto">
               <li>
                 Contacto

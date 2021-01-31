@@ -5,13 +5,12 @@ import { getCarouselHome } from '../../api/slider/request'
 import logoMarron from '../../assets/images/logo-marron.jpg'
 import { BoxProject, Carousel, Spinner } from '../../components'
 import './home.scss'
+
 const Home = () => {
 
   const [loading, setLoading] = useState(false)
   const [projects, setProjects] = useState(false)
   const [carouselItems, setCarouselItems] = useState(false)
-
-
   const projectsPromise = getProjects()
   const carouselPromise = getCarouselHome()
 
