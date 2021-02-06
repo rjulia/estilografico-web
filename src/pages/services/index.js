@@ -1,42 +1,43 @@
 import _ from 'lodash'
-import React, {useEffect} from 'react'
+import React from 'react'
+import { Link } from "react-router-dom"
 import './services.scss'
 import { useServices } from '../../hooks'
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { Spinner } from '../../components';
-import { SectionService } from './components'
-import './services.scss'
 
-const Services = ({location}) => {
-  const { service, apiGetService } = useServices();
+const Services = () => {
+  const { services } = useServices();
 
-  console.log(service, _.isEmpty(service))
-  useEffect(() => {
-    apiGetService(location)
-  }, [location])
-  const colorsHightLight = _.split(service.highlightsColors, ',');
-  if (_.isEmpty(service)) {
-    return <Spinner />
-  }
-  const sections = _.get(service, 'seccionesServicosCollection.items', [])
+
   return (
-    <div className="container-fluid-services">
-      <div className="box-title-service">
-        <h1 className="title-service"><span>#0{service.orden}</span>{service.nombre}</h1>
-        <p className="description-service">{service.descripcionEs}</p>      
-      </div>
-      <div className="highlight-services" style={{backgroundColor: `${colorsHightLight[0]}`}}>
-        <div className="highlight-content-services">
-          <p style={{color:`${colorsHightLight[1]}` }}>{documentToReactComponents(service.highlightsEs.json)}</p>
+    <div className="container-submenu">
+      <div className="box-submenu">
+        <ul className="list-submenu">
+          {
+            _.map(services, (service) => (
 
-        </div>
+              <li  key={service.orden}>
+                <Link 
+                  className="item-submenu"
+                  style={{textDecoration: 'none'}} 
+                  to={{
+                    pathname: `/servicios/${service.slug}`,
+                    state: {
+                      id: service.sys.id
+                    }
+                  }} >
+                  <p className="item-number-submenu">
+                    #0{service.orden}
+                  </p>
+                  <p className="item-title-submenu">{service.nombre}</p>
+                  <p className="item-description-submenu">{service.descripcionEs}</p>
+                    
+                </Link>
+              </li>
+            ))
+          }
+        </ul>
       </div>
       
-      {
-        _.map(sections, (section)=> <SectionService  key={section.titulo} section={section}/>)
-      }
-      
-
     </div>
   )
 }

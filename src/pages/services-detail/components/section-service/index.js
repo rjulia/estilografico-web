@@ -2,6 +2,7 @@ import _ from 'lodash'
 import React from 'react'
 import ContentHighlight from '../content-highlight'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { ContentfulRichText } from '../../../../components'
 import './section-services.scss'
 
 const SectionServices = ({
@@ -15,8 +16,7 @@ const SectionServices = ({
       style={{backgroundColor: section.bgc}}>
       <div className="content-section-services">
         <div className="colunm-left-section-services">
-        {documentToReactComponents(_.get(section, 'contenido.json'))}
-
+        <ContentfulRichText content={(_.get(section, 'contenido'))} />
         </div>
         <div className="colunm-right-section-services">
           {

@@ -1,44 +1,54 @@
 @import '../../scss/variables';
 
-.container-fluid-services {
-  width: 100%;
-}
-
-.box-title-service {
-  width: $container;
+.container-submenu {
+  width: 100vw;
   margin: 0 auto;
-
-  .title-service {
-    color:$tercery_light;
-    font-size: 72px;
-    font-family: $auxB;
-    text-transform: uppercase;
-    margin-bottom: 48px;
-    margin-top: 54px;
-  }
-
-  .description-service {
-    color:$tercery_light;
-    font-size: 36px;
-    line-height:40px;
-    font-family: $text;
-    font-weight: 600;
-  }
-
-}
-.highlight-services {
-  padding: 80px 0;
-  .highlight-content-services {
+  background: $secondary;
+  height: calc(100vh - 130px);
+  text-align: center;
+  flex: 1;
+  .box-submenu {
     width: $container;
+
     margin: 0 auto;
+    height: auto;
   }
-  p {
-    font-size: 38px;
-    line-height:42px;
-    text-align: left;
-    font-family: $auxL;
-    b {
+  .list-submenu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  .item-submenu {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    height: 90px;
+    color: $tercery;
+
+    .item-number-submenu {
+      width: 35px;
+      color: $tercery;
+      border-bottom: 2px solid $tercery;
+      border-top: 2px solid $tercery;
+      font-size: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-family: $auxL;
+      text-align: left;
+
+    }
+    .item-title-submenu {
+      width: 300px;
+      padding-left: 50px;
+      font-size: 24px;
       font-family: $auxB;
+      text-align: left;
+    }
+    .item-description-submenu {
+      flex: 1 1 calc(100% - 350px);
+      text-align: left;
+
     }
   }
 }

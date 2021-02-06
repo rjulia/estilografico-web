@@ -21,14 +21,11 @@ const Header = () => {
                 Equipo
               </li>
             </NavLink>
-            <div className="list-menu">
+            <NavLink activeClassName="selected" className="list-menu" to="/servicios">
               <li>
                 Servicios
               </li>
-              <div className="list-submenus">
-                <MenuServicios/>
-              </div>
-            </div>
+            </NavLink>
             <NavLink activeClassName="selected" className="list-menu" to="/contacto">
               <li>
                 Contacto

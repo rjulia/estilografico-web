@@ -33,7 +33,7 @@ export const queryService = (id) => {
         sys{
           id
         }
-        trabajosRelacionados {
+        proyectosRelacionados {
           orden
           titulo
           slug
@@ -49,6 +49,19 @@ export const queryService = (id) => {
             titulo
             contenido {
               json
+              links {
+                assets {
+                  block {
+                    fileName
+                      title
+                      description
+                      url
+                      sys {
+                          id
+                      }
+                  }
+                }
+              }
             }
             bgc
             destacadosCollection (limit: 2) {
