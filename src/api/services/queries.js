@@ -33,15 +33,21 @@ export const queryService = (id) => {
         sys{
           id
         }
-        proyectosRelacionados {
-          orden
-          titulo
-          slug
-          portada {
-            url
-            title
+        proyectosRelacionadoCollection(limit: 5){
+          limit
+          items {
+            sys {
+              id
+            }
+            orden
+            titulo
+            slug
+            portada {
+              url
+              title
+              }
+            }
           }
-        }
         seccionesServicosCollection (limit: 5){
           limit
           items{

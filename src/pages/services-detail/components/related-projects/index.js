@@ -1,15 +1,18 @@
+import _ from 'lodash'
 import React from 'react'
 import './related-projects.scss'
+import {BoxProject} from '../../../../components'
 
-const RelatedProjects = () => {
+const RelatedProjects = ({projects, servicesname}) => {
+  console.log(projects)
   return (
-    <div>
-      <div>
-        <h4>Related Projects</h4>
+    <div className="container-home-projects">
+      <div className="box-title-projects">
+        <h2>HEMOS DESARROLLADO <span>{servicesname}</span> CON </h2>
       </div>
-      <div>
-
-      </div>
+      {
+        _.map(projects, (project) => (<BoxProject project={project} key={project.sys.id}/>))
+      }
     </div>
   )
 }

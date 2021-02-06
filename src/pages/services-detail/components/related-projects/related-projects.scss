@@ -1,0 +1,24 @@
+@import '../../../../scss/variables';
+
+.box-title-projects {
+  margin-top: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  h2 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 300;
+    color:$tercery_light;
+    font-family: $auxL;
+
+    span {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: $auxB;
+
+    }
+  }
+}

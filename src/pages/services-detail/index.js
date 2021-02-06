@@ -4,7 +4,7 @@ import './services.scss'
 import { useServices } from '../../hooks'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Spinner } from '../../components';
-import { SectionService } from './components'
+import { SectionService, RelatedProjects, Navigation } from './components'
 import './services.scss'
 
 const ServicesDetail = ({location}) => {
@@ -35,7 +35,11 @@ const ServicesDetail = ({location}) => {
       {
         _.map(sections, (section)=> <SectionService  key={section.titulo} section={section}/>)
       }
-      
+      <RelatedProjects 
+        projects={_.get(service, 'proyectosRelacionadoCollection.items')}
+        servicesname={_.get(service,'nombre')}
+        />
+      <Navigation />
 
     </div>
   )
