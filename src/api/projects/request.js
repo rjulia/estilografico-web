@@ -24,13 +24,13 @@ export const getProjects = async () => {
   }
 }
 
-export const getProject = async (id) => {
+export const getProject = async (slug) => {
   try {
     const response = await axios({
       method: 'post',
       url,
       data: {
-        query: queryProject(`"${id}"`)
+        query: queryProject(`"${slug}"`)
       },
       headers: {
         "Content-Type": "application/json",

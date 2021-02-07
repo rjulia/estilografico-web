@@ -29,67 +29,41 @@ export const queryProjects = `
 }
 `
 
-export const queryProject = (id) => {
-  return `
-  {
-    servicio(id: ${id}) {
-        orden
+export const queryProject = (slug) => {
+  return `{
+    projectoCollection(
+      where:{slug:${slug}},
+      order:orden_ASC,
+      limit:1) {
+        items{
+          titulo
+        subtitulo
         slug
-        nombre
-        descripcionEs
-        highlightsEs {
+        portada {
+          url
+          title
+          description
+          width
+          height
+        }
+        contenido {
           json
         }
-        highlightsColors
-        sys{
-          id
-        }
-        proyectosRelacionadoCollection(limit: 5){
+        listaDeVideos
+        listaDeObjectivos
+        listaDeImagesCollection{
           limit
-          items {
-            sys {
-              id
-            }
-            orden
-            titulo
-            slug
-            portada {
-              url
-              title
-              }
-            }
-          }
-        seccionesServicosCollection (limit: 5){
-          limit
+          total
           items{
-            posicion
-            titulo
-            contenido {
-              json
-              links {
-                assets {
-                  block {
-                    fileName
-                      title
-                      description
-                      url
-                      sys {
-                          id
-                      }
-                  }
-                }
-              }
-            }
-            bgc
-            destacadosCollection (limit: 2) {
-              items {
-                frase {
-                  json
-                }
-              }
-            }
+            title
+            description
+            width
+            height
+            url
+          }
           }
         }
+        
       }
     }
   `

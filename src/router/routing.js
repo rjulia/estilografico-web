@@ -4,7 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { Home, Contact, Services, ServicesDetail, Team} from '../pages'
+import { Home, Contact, Services, ServicesDetail, Team, ProjectDetail} from '../pages'
 import { Header, Footer } from '../layout'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
             <Route exact path="/equipo" component={Team} />
             <Route exact path="/servicios/:slug" component={ServicesDetail} />
             <Route exact path="/servicios" component={Services} />
-            <Route exact path="/projectos/:slug" component={Services} />
+            <Route exact path="/proyectos/:slug" component={ProjectDetail} />
             <Route exact path="/contacto" component={Contact} />
           </Switch>
         </Suspense>

@@ -36,7 +36,7 @@ Estaremos encantados de conocerte. EstÃ¡s muy cerca de contactar con nosotros. Â
 
 
       </div>
-      <Map isMarkerShown={true} />
+      <Map />
     </div>
   )
 }

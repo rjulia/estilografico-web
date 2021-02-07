@@ -19,7 +19,7 @@ const Service = ({service}) => {
       </div>
       <div className="highlight-services" style={{backgroundColor: `${colorsHightLight[0]}`}}>
         <div className="highlight-content-services">
-          <p style={{color:`${colorsHightLight[1]}` }}>{documentToReactComponents(service.highlightsEs.json)}</p>
+          <div style={{color:`${colorsHightLight[1]}` }}>{documentToReactComponents(service.highlightsEs.json)}</div>
 
         </div>
       </div>

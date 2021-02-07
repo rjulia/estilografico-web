@@ -1,33 +1,19 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from 'react'
-import { compose, withProps } from "recompose"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
-import {styles} from '../stylesMap'
 
-const Map = compose(
-  withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
-    loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `480px` }} />,
-    mapElement: <div style={{ height: `100%` }} />,
-  }),
-  withScriptjs,
-  withGoogleMap
-)((props) =>
-  <GoogleMap
-    defaultZoom={17}
-    defaultCenter={{ lat: 43.1853627, lng: -2.4685799 }}
-    defaultOptions={{
-      disableDefaultUI: true, // disable default map UI
-      draggable: true, // make map draggable
-      keyboardShortcuts: false, // disable keyboard shortcuts
-      scaleControl: true, // allow scale controle
-      scrollwheel: true, // allow scroll wheel
-      styles: styles // change default map styles
-    }}
-    
-  >
-    {props.isMarkerShown && <Marker position={{ lat: 43.1853627, lng: -2.4685799 }} />}
-  </GoogleMap>
-)
+const Map = () =>{
+  return (
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11636.600126478783!2d-2.4663912!3d43.1853627!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb2cdc732b0e454a1!2sESTILOGR%C3%81FICO!5e0!3m2!1sen!2shk!4v1612696811299!5m2!1sen!2shk" width="100%" 
+      height="600" 
+      frameborder="0" 
+      allowfullscreen="" 
+      ariaHidden="false" 
+      tabindex="0">
+      
+    </iframe>
+
+  )
+}
 
 export default Map

@@ -21,7 +21,7 @@ const BoxProject = ({
           <p>{subtitulo}</p>
         </div>
         <div className="button-box-project">
-          <Link to={`/projects/${slug}`}>
+          <Link to={`/proyectos/${slug}`}>
             <p>VER <span>+</span></p>
           </Link>
         </div>
