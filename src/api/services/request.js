@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { queryService, queryServicies } from './queries'
+import { serviceBySlug, queryServicies } from './queries'
 import { url } from '../../constants'
 
 export const getQueryServices = async () => {
@@ -21,13 +21,13 @@ export const getQueryServices = async () => {
   }
 }
 
-export const getQueryService = async (id) => {
+export const getQueryService = async (slug) => {
   try {
     const response = await axios({
       method: 'post',
       url,
       data: {
-        query: queryService(`"${id}"`)
+        query: serviceBySlug(`"${slug}"`)
       },
       headers: {
         "Content-Type": "application/json",

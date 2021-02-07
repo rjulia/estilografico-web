@@ -2,8 +2,6 @@ import _ from 'lodash'
 import React, { useState, useEffect } from 'react'
 import ServicesContext from './services-context'
 import {getQueryServices, getQueryService} from '../../api/services/request'
-
-
 export default function ServicesProvider({ children }) {
 
   // internal state
@@ -15,11 +13,12 @@ export default function ServicesProvider({ children }) {
   const [currentId, setCurrentId] = useState(0)
   const [totalservices, setTotalservices] = useState(0)
 
-  const apiGetService = (location) => {
+  const apiGetService = (slug) => {
+    console.log('apiGetService', slug)
     setLoading(true)
-    getQueryService(_.get(location, 'state.id')).then((response) => {
-      setCurrentId(_.get(response, 'data.servicio.id'))
-      setService(_.get(response, 'data.servicio')) 
+    getQueryService(slug).then((response) => {
+      setCurrentId(_.get(response, 'data.servicioCollection.items[0].sys.id'))
+      setService(_.get(response, 'data.servicioCollection.items[0]')) 
       setLoading(false) 
       
     })

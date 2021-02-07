@@ -1,7 +1,6 @@
 import _ from 'lodash'
 import React from 'react'
 import ContentHighlight from '../content-highlight'
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { ContentfulRichText } from '../../../../components'
 import './section-services.scss'
 
