@@ -46,11 +46,11 @@
 .box-footer {
   width: 100%;
   display: flex;
-  justify-content:center;
+  justify-content:space-between;
   color: $grey_dark;
 
   .box-logo-footer {
-    width: 444px;
+    // width: 444px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -87,6 +87,7 @@
   }
   @include desktop { 
     width: $container;
+    padding: 0 80px;
     margin: 0 auto;
     .box-info-footer {
       width: 544px;

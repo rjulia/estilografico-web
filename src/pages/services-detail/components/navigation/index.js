@@ -16,7 +16,8 @@ const NavigationService = () => {
   }
 
   const goToServcies = () => {
-    history.push('/services')
+    window.scrollTo(0, 0)
+    history.push('/servicios')
   }
   return (
     <div className="container-navigation-services">

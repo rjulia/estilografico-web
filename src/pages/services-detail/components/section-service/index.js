@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import React from 'react'
+import classNames from 'classnames'
 import ContentHighlight from '../content-highlight'
 import { ContentfulRichText } from '../../../../components'
 import './section-services.scss'
@@ -7,15 +8,18 @@ import './section-services.scss'
 const SectionServices = ({
   section,
 }) => {
-
   const quotes = _.get(section, 'destacadosCollection.items', [])
+  let columnLeft = classNames({
+    'colunm-left-section-services': true,
+    'colunm-left-section-services-width': !_.isEmpty(quotes)
+  });
   return (
     <div 
       className="container-section-services"
       style={{backgroundColor: section.bgc}}>
       <div className="content-section-services">
-        <div className="colunm-left-section-services">
-        <ContentfulRichText content={(_.get(section, 'contenido'))} />
+        <div className={columnLeft}>
+          <ContentfulRichText content={(_.get(section, 'contenido'))} />
         </div>
         <div className="colunm-right-section-services">
           {

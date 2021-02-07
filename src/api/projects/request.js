@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { queryProjects } from './queries'
+import { queryProjects, queryProject } from './queries'
 import { url } from '../../constants'
 
 
@@ -16,6 +16,29 @@ export const getProjects = async () => {
         Authorization: `Bearer ${process.env.REACT_APP_CONTENFUL_TOKEN}`,
       }
     })
+    return response.data
+
+
+  } catch (error) {
+    console.log("error", error);
+  }
+}
+
+export const getProject = async (id) => {
+  try {
+    const response = await axios({
+      method: 'post',
+      url,
+      data: {
+        query: queryProject(`"${id}"`)
+      },
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.REACT_APP_CONTENFUL_TOKEN}`,
+      }
+    })
+    console.log(response)
+
     return response.data
 
 

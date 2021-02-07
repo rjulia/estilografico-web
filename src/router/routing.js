@@ -17,7 +17,7 @@ function App() {
             <Route exact path="/equipo" component={Team} />
             <Route exact path="/servicios/:slug" component={ServicesDetail} />
             <Route exact path="/servicios" component={Services} />
-            {/* <Route exact path="/projectos/:slug" component={Services} /> */}
+            <Route exact path="/projectos/:slug" component={Services} />
             <Route exact path="/contacto" component={Contact} />
           </Switch>
         </Suspense>

@@ -9,13 +9,15 @@
   flex: 1;
   .box-submenu {
     width: $container;
-
+    padding: 0 80px;
     margin: 0 auto;
     height: auto;
   }
   .list-submenu {
     display: flex;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
   }
   .item-submenu {
     display: flex;

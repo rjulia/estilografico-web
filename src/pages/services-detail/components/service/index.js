@@ -10,7 +10,7 @@ const Service = ({service}) => {
 
   const colorsHightLight = _.split(service.highlightsColors, ',');
   const sections = _.get(service, 'seccionesServicosCollection.items', [])
-
+  
   return (
     <div className="container-fluid-services">
       <div className="box-title-service">

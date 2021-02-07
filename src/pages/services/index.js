@@ -1,10 +1,10 @@
 import _ from 'lodash'
 import React from 'react'
 import { Link } from "react-router-dom"
-import './services.scss'
 import { useServices } from '../../hooks'
+import './services.scss'
 
-const Services = () => {
+const SubmenuServices = () => {
   const { services } = useServices();
 
 
@@ -42,4 +42,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default SubmenuServices
