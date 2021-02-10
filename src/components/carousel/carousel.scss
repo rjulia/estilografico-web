@@ -7,6 +7,7 @@
     flex-direction: column;
     position: relative;
     height: calc(100vh - 80px);
+    min-height: -webkit-fill-available;
   }
   .text-carousel {
     @include container;
@@ -17,8 +18,9 @@
     text-align: left;
     
     .text-carousel-content {
-      padding-left: 20px;
-      padding-top: 390px;
+      position: absolute;
+      bottom: 0;
+      padding: 15px;
         p {
           font-weight: 300;
           font-size: 18px;
@@ -40,6 +42,8 @@
     position: absolute;
     left: 0;
     top: 0;
+    max-height: 340px;
+    overflow: hidden;
     img {
       width: 100%;
     }
@@ -73,15 +77,18 @@
       left: initial;
       right: 0;
       top: 0;
+      max-height: max-content;
+      padding: 0;
     }
     .text-carousel {
-
+      flex: 1 1;
       margin: 0 auto;
       text-align: left;
       
       .text-carousel-content {
         padding-top: 0;
         padding-right: 200px;
+        position: relative;
           p {
             font-weight: 300;
             font-size: 28px;

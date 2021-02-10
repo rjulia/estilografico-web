@@ -17,8 +17,10 @@ const Footer = () => {
         </div>
         <div className="box-footer">
           <div className="box-logo-footer">
-            <Logo/>
-            <p>Copyright<span>©</span>ESTILOGRÁFICO</p>
+            <div>
+              <Logo/>
+            </div>
+            <p className="box-logo-footer-copyright">Copyright<span>©</span>ESTILOGRÁFICO</p>
           </div>
           <div className="box-info-footer">
             <div>
