@@ -2,27 +2,26 @@
 .container-box-project{
   position: relative;
   height: 440px;
-  background-color: #000;
+  background-color: rgba(0,0,0, 0.5);
   margin: 20px 0;
   border-bottom: 10px solid $main;
   .box-box-project {
+    @include container;
+    height: 400px;
     background-color: transparent;
-    max-width: $container;
-    margin: 0 auto;
-    width: 100%;
-    padding: 85px 70px;
     display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-content: space-between;
     z-index: 1;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    .content-box-project {
+      padding: 20px 20px;
+    }
     & h3, & p {
       color: $white;
-      max-width: 680px;
-      font-size: 48px;
+      font-size: 24px;
       font-weight: 700;
-      line-height:56px;
+      line-height:28px;
       font-family: $text;
       margin: 0;
     }
@@ -32,7 +31,6 @@
   }
   .button-box-project {
     display: flex;
-    flex: 1 1 calc(100% - 680px);
     position: relative;
     justify-content: center;
     align-items: center;
@@ -62,6 +60,33 @@
     opacity: 0.5;
     height: 440px;
     width: 100%;
-    z-index: 0;
+    z-index: -1;
+  }
+  @include desktop { 
+    .box-box-project {
+      padding: 85px 70px;
+      display: flex;
+      flex-direction:row;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      & h3, & p {
+        color: $white;
+        max-width: 680px;
+        font-size: 48px;
+        font-weight: 700;
+        line-height:56px;
+      }
+      & p {
+        font-weight: 300;
+      }
+    }
+    .box-box-project { 
+      flex: 1 1 70%;
+    }
+    .button-box-project {
+      flex: 1 1 30%;
+
+    }
   }
 }

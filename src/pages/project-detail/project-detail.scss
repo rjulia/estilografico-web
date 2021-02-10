@@ -59,8 +59,8 @@
 }
 
 .list-images-project-detail {
+  @include container;
   margin: 0 auto;
-  width: $container;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

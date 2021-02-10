@@ -3,94 +3,109 @@
 .container-footer {
   background-color: $secondary;
 
-}
-
-.container-contact-footer {
-  background-color: $grey_dark;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content:center;
-  font-family: $text;
-}
-
-.button-contanct-footer {
-  width: 100%;
-  background-color: $orange;
-  height: 75px;
-  display: flex;
-  text-decoration: none;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin-left: 15px;
-  & p {
-    color: $text_color;
-    font-family: $text;
-    font-size: 28px;
-    font-weight: 300;
-  }
-  @include desktop { 
-    width: 510px;
-  }
-}
-
-.message-contact-footer {
-  color: $orange;
-  font-family: $text;
-  font-size: 28px;
-  font-weight: 400;
-  margin-right: 15px;
-}
-
-.box-footer {
-  width: 100%;
-  display: flex;
-  justify-content:space-between;
-  color: $grey_dark;
-
-  .box-logo-footer {
-    // width: 444px;
+  .container-contact-footer {
+    background-color: $grey_dark;
+    height: 180px;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    & svg {
-      color: $grey_dark;
-      transform: scale(0.5) translate(-188px, 10px);
+    justify-content:center;
+    font-family: $text;
+    .message-contact-footer {
+      color: $orange;
+      text-align: center;
+      font-family: $text;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .button-contanct-footer {
+      width: calc(100% - 40px);
+      background-color: $orange;
+      height: 75px;
+      display: flex;
+      text-decoration: none;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      & p {
+        color: $text_color;
+        font-family: $text;
+        font-size: 22px;
+        font-weight: 300;
+      }
+    }
+    @include desktop { 
+      flex-direction: row;
+      .message-contact-footer {
+        text-align: left;
+        font-size: 28px;
+        font-weight: 400;
+        margin-right: 15px;
+      }
+      .button-contanct-footer { 
+        width: 100%;
+        margin-left: 15px;
+        width: 510px;
+        & p {
+          font-size: 28px;
+        }
+      }
     }
   }
-
-  .box-info-footer {
+  .box-footer {
+    width: 100%;
     display: flex;
-    
-    & div {
-      flex: 1 1 100%;
+    justify-content:space-between;
+    flex-direction: column;
+    color: $grey_dark;
+  
+    .box-logo-footer {
+      // width: 444px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+  
+      & svg {
+        color: $grey_dark;
+        transform: scale(0.5) translate(-188px, 10px);
+      }
     }
-    & h3 {
-      font-size: 12px;
-      font-weight: 700;
-    }
-    & p {
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 16px;
-      margin: 0;
-    }
-    & span {
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 16px;
-      margin: 0;
-    }
-  }
-  @include desktop { 
-    width: $container;
-    padding: 0 80px;
-    margin: 0 auto;
+  
     .box-info-footer {
-      width: 544px;
+      @include container;
+      display: flex;
+      
+      & div {
+        flex: 1 1 100%;
+      }
+      & h3 {
+        font-size: 12px;
+        font-weight: 700;
+      }
+      & p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        margin: 0;
+      }
+      & span {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        margin: 0;
+      }
+    }
+    @include desktop { 
+      padding: 0 80px;
+      margin: 0 auto;
+      .box-info-footer {
+        width: 544px;
+      }
     }
   }
 }
+
+
+

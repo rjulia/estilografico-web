@@ -11,7 +11,7 @@ $auxL: 'Blogger Sans Light', sans-serif;
 
 //metrics
 
-$container: 1210px;
+// @include container: 1210px;
 
 
 $main: #bb0e0a;
@@ -53,3 +53,12 @@ $container-max-widths: (
   lg: 960px,
   xl: 1300px
 ) !default;
+
+@mixin container() {
+  @media only screen and (max-width: $tablet-width) {
+      width: 100%;
+  }
+  @media only screen and (min-width: $tablet-width) {
+      width: 1210px;
+  }
+}

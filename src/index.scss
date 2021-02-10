@@ -17,6 +17,10 @@ body {
   font-family: $text;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  div {
+    box-sizing: border-box; 
+
+  }
 }
 
 .contianer-spinner {

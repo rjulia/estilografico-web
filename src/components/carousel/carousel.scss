@@ -4,38 +4,45 @@
   width: 100%;
   .content-carousel {
     display: flex;
+    flex-direction: column;
     position: relative;
-    height: 530px;
+    height: calc(100vh - 80px);
   }
   .text-carousel {
-    width: 1360px;
+    @include container;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
     text-align: left;
-    color: $tercery;
-    .text-carousel-first-text {
-      font-size: 28px;
-      line-height:36px;
-    }
-    .text-carousel-second-text {
-      font-size: 60px;
-      line-height:60px;
-      margin: 0;
-      margin-bottom: 30px;
-    }
-    & .text-carousel-content p {
-      font-weight: 300;
-      font-size: 28px;
-      line-height:36px;
-      margin: 5px 0;
-    }
+    
+    .text-carousel-content {
+      padding-left: 20px;
+      padding-top: 390px;
+        p {
+          font-weight: 300;
+          font-size: 18px;
+          line-height:24px;
+          margin: 5px 0;
+          color: inherit;
+        }
+        h2 {
+          font-weight: 400;
+          font-size: 24px;
+          line-height:28px;
+          margin: 15px 0;
+          color: inherit;
+        }
+
+    } 
   }
   .image-carousel {
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
+    img {
+      width: 100%;
+    }
   }
   .arrow {
     position: absolute;
@@ -46,10 +53,54 @@
     cursor: pointer;
     z-index: 2;
   }
+  .arrow {
+    display: none;
+  }
   .nextArrow {
     right: 50px;
   }
   .prevArrow {
     left: 50px;
+  }
+  @include desktop { 
+    .content-carousel {
+      display: flex;
+      position: relative;
+      height: 530px;
+    }
+    .image-carousel {
+      position: absolute;
+      left: initial;
+      right: 0;
+      top: 0;
+    }
+    .text-carousel {
+
+      margin: 0 auto;
+      text-align: left;
+      
+      .text-carousel-content {
+        padding-top: 0;
+        padding-right: 200px;
+          p {
+            font-weight: 300;
+            font-size: 28px;
+            line-height:36px;
+            margin: 5px 0;
+            color: inherit;
+          }
+          h2 {
+            font-weight: 400;
+            font-size: 60px;
+            line-height:72px;
+            margin: 15px 0;
+            color: inherit;
+          }
+  
+      } 
+    }
+    .arrow {
+      display: inline-block;
+    }
   }
 }

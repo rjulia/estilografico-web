@@ -20,7 +20,6 @@ const Home = () => {
       projectsPromise, 
       carouselPromise
     ]).then((values) => {
-      console.log(values);
       setCarouselItems(_.get(values, '[1].data.slideShowHomeCollection.items'))
       setProjects(_.get(values, '[0].data.projectoCollection.items'))
       setLoading(false)
@@ -31,7 +30,7 @@ const Home = () => {
 
   return (
     <div className="container-fluid-home">
-      <Carousel images={carouselItems}/>
+      <Carousel images={carouselItems}/> 
       <div className="container-fluid-home-block block-1">
         <div>
           <h2>Somos un estudio de <b>diseño</b> y <b>publicidad</b>.
@@ -54,14 +53,13 @@ const Home = () => {
           backgroundSize: 'cover',
         }}
         >
-        {/* <img src={logoMarron} alt="logo"/> */}
         <div>
           <h2><b>Diseñamos la imagen de tu negocio</b>:<br /><br />
           Branding (Creación de marca y promoción),
           Web, Tienda online,
           Fotografía, Video, Catálogo...</h2>
         </div>
-      </div>
+      </div> 
       <div className="container-home-projects">
         <div className="box-home-projects">
           <h2>TRABAJOS <span>QUE QUEREMOS MOSTRARTE</span></h2>

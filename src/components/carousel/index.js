@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import React from "react";
 import Slider from "react-slick";
 import { ReactComponent as ArrowLeft } from '../../assets/icons/left-chevron.svg';
@@ -45,25 +46,27 @@ function Carousel({images}) {
     nextArrow: <NextArrow className="arrow right" />,
     prevArrow: <PrevArrow className="arrow right"/>
   };
+
   return (
     <div className="box-carousel">
       <Slider {...settings}>
         {
-          images && images.map( (item) => (
-            <div  key={item.url} >
-              <div className="content-carousel" style={{backgroundColor: `${item.bgc}`}}>
-                <div className="text-carousel">
-                  <p className="text-carousel-first-text">Es más importante ser útil que intentar parecer importante.</p>
-                  <p className="text-carousel-second-text">¿Porqué somos útiles?</p>
-          
-                  <div className="text-carousel-content">{documentToReactComponents(item.textoEs.json)}</div>
-                </div>
-                <div className="image-carousel">
-                  <img src={item.imagen.url} alt={item.texto || ""}/>
+          images && images.map((item) => {
+            const colorsSlider = _.split(item.bgc, ',');
+            return (
+              <div  key={item.url} >
+                <div className="content-carousel" style={{backgroundColor: `${colorsSlider[0]}`}}>
+                  <div className="text-carousel" style={{color: `${colorsSlider[1]}`}}>
+                    <div className="text-carousel-content">{documentToReactComponents(item.textoEs.json)}</div>
+                  </div>
+                  <div className="image-carousel">
+                    <img src={item.imagen.url} alt={item.texto || ""}/>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))
+
+            )
+          })
         }
       </Slider>
     </div>

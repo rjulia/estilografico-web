@@ -8,8 +8,7 @@
   text-align: center;
   flex: 1;
   .box-submenu {
-    width: $container;
-
+    @include container;
     margin: 0 auto;
     height: auto;
   }

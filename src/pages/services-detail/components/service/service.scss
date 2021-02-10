@@ -5,7 +5,7 @@
 }
 
 .box-title-service {
-  width: $container;
+  @include container;
   margin: 0 auto 80px;
 
   .title-service {
@@ -29,7 +29,7 @@
 .highlight-services {
   padding: 80px 0;
   .highlight-content-services {
-    width: $container;
+    @include container;
     margin: 0 auto;
   }
   p {
