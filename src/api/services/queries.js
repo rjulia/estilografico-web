@@ -9,6 +9,7 @@ export const queryServicies = `
         orden
         slug
         nombre
+        subtituloEnlaces
         descripcionEs
         highlightsColors
         sys{

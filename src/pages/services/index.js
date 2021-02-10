@@ -29,7 +29,7 @@ const SubmenuServices = () => {
                     #0{service.orden}
                   </p>
                   <p className="item-title-submenu">{service.nombre}</p>
-                  <p className="item-description-submenu">{service.descripcionEs}</p>
+                  <p className="item-description-submenu">{service.subtituloEnlaces}</p>
                     
                 </Link>
               </li>
