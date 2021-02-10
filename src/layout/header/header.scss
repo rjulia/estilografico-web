@@ -84,8 +84,7 @@
     .container-menu {
       @include container;
       margin: 0 auto;
-      padding: 0 80px;
-      height: 110px;
+      height: 100px;
     }
     .container-logo {
       height: 110px;
@@ -98,7 +97,7 @@
       flex: 1 1 100%;
       position: relative;
       & svg {
-        transform: scale(0.75);
+        transform: scale(0.65);
         position: absolute;
         left: -40px;
         top: -6px;
@@ -106,6 +105,7 @@
     }
     .box-menu ul { 
       display: flex;
+      margin-bottom: 15px;
     }
   }
 }

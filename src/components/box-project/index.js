@@ -14,25 +14,25 @@ const BoxProject = ({
     portada
   } = project
   return (
-    <div className="container-box-project">
-      <div className="box-box-project">
-        <div className="content-box-project">
-          <h3>{titulo}</h3>
-          <p>{subtitulo}</p>
-        </div>
-        <div className="button-box-project">
-          <Link to={`/proyectos/${slug}`}>
+    <Link to={`/proyectos/${slug}`}>
+      <div className="container-box-project">
+        <div className="box-box-project">
+          <div className="content-box-project">
+            <h3>{titulo}</h3>
+            <p>{subtitulo}</p>
+          </div>
+          <div className="button-box-project">
             <p>VER <span>+</span></p>
-          </Link>
+          </div>
         </div>
+        <div
+          className="container-box-image-project"
+          style={{
+            backgroundImage: `url(${portada.url})`,
+          }} />
+
       </div>
-      <div
-        className="container-box-image-project"
-        style={{
-          backgroundImage: `url(${portada.url})`,
-        }}/>
-      
-    </div>
+    </Link>
   )
 }
 
