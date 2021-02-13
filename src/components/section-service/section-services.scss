@@ -1,4 +1,4 @@
-@import '../../../../scss/variables';
+@import '../../scss/variables';
 
 .container-section-services {
   width: 100%;
@@ -83,7 +83,7 @@
     margin-bottom: 20px;
   }
   li {
-    list-style-image: url("../../../../assets/icons/rombo.svg");
+    list-style-image: url("../../assets/icons/rombo.svg");
     p {
       margin-bottom: 0;
     }
@@ -95,6 +95,6 @@
     position: absolute;
     top: 5px;
     left: -20px;
-    content: url("../../../../assets/icons/rombo.svg")
+    content: url("../../assets/icons/rombo.svg")
   }
 }

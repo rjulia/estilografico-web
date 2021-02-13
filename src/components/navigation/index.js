@@ -1,8 +1,8 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
-import { ButtonNavigation } from '../../../../components'
-import { ReactComponent as Squares } from '../../../../assets/icons/squares.svg';
-import { ReactComponent as ArrowUp } from '../../../../assets/icons/arrow-up.svg';
+import ButtonNavigation from '../button-navigation'
+import { ReactComponent as Squares } from '../../assets/icons/squares.svg';
+import { ReactComponent as ArrowUp } from '../../assets/icons/arrow-up.svg';
 import './navigation.scss'
 
 const NavigationService = () => {

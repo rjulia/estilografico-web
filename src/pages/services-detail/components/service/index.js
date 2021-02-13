@@ -1,9 +1,11 @@
 import _ from 'lodash'
 import React from 'react'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import SectionService from '../section-service'
-import Navigation from '../navigation'
-import RelatedProjects from '../related-projects'
+import {
+  RelatedProjects,
+  Section,
+  Navigation
+} from '../../../../components'
 import './service.scss'
 
 const Service = ({service}) => {
@@ -25,11 +27,11 @@ const Service = ({service}) => {
       </div>
       
       {
-        _.map(sections, (section)=> <SectionService  key={section.titulo} section={section}/>)
+        _.map(sections, (section)=> <Section  key={section.titulo} section={section}/>)
       }
       <RelatedProjects 
         projects={_.get(service, 'proyectosRelacionadoCollection.items')}
-        servicesname={_.get(service,'nombre')}
+        name={_.get(service,'nombre')}
         />
       <Navigation />
 

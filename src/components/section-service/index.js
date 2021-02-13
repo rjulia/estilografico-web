@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React from 'react'
 import classNames from 'classnames'
 import ContentHighlight from '../content-highlight'
-import { ContentfulRichText } from '../../../../components'
+import ContentfulRichText from '../contenful-rich-text'
 import './section-services.scss'
 
 const SectionServices = ({

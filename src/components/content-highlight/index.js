@@ -1,6 +1,6 @@
 import React from 'react'
 import './content-highlight.scss'
-import { ReactComponent as Quotes } from '../../../../assets/icons/quotes.svg';
+import { ReactComponent as Quotes } from '../../assets/icons/quotes.svg';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 
