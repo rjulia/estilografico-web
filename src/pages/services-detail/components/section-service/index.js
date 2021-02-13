@@ -9,15 +9,20 @@ const SectionServices = ({
   section,
 }) => {
   const quotes = _.get(section, 'destacadosCollection.items', [])
+  let container = classNames({
+    'content-section-services': true,
+    'width-symbol': _.get(section, 'conSimbolo'),
+  })
+
   let columnLeft = classNames({
     'colunm-left-section-services': true,
-    'colunm-left-section-services-width': !_.isEmpty(quotes)
+    'colunm-left-section-services-width': !_.isEmpty(quotes),
   });
   return (
     <div 
       className="container-section-services"
       style={{backgroundColor: section.bgc}}>
-      <div className="content-section-services">
+      <div className={container}>
         <div className={columnLeft}>
           <ContentfulRichText content={(_.get(section, 'contenido'))} />
         </div>

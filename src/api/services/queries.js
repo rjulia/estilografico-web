@@ -58,6 +58,7 @@ export const serviceBySlug = (slug) => `{
         items{
           posicion
           titulo
+          conSimbolo
           contenido {
             json
             links {

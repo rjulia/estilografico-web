@@ -31,6 +31,12 @@
   .bottom-quotes {
     width:100%;
     height: 50px;
-    color: #dbd6cb
+    color: #dbd6cb;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    svg {
+      transform: rotate(180deg)
+    }
   }
 }

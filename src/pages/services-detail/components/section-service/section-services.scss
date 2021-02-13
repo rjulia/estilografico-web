@@ -11,6 +11,10 @@
   display: flex;
 }
 
+.colunm-right-section-services {
+  padding-top: 90px;
+}
+
 .colunm-left-section-services {
   padding-right: 30px;
   &.colunm-left-section-services-width {
@@ -76,8 +80,21 @@
   p {
     font-size: 24px;
     line-height:28px;
+    margin-bottom: 20px;
   }
   li {
     list-style-image: url("../../../../assets/icons/rombo.svg");
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+.width-symbol {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 5px;
+    left: -20px;
+    content: url("../../../../assets/icons/rombo.svg")
   }
 }
