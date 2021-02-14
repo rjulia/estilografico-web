@@ -14,24 +14,33 @@
     align-items: flex-end;
     margin: 0 auto;
     height: 80px;
+
   }
   .container-logo {
     height: 80px;
     width: 100%;
+    a {
+     color: $main;
+     width: 50vw;
+     height: 80px;
+     display: flex;
+     position: relative;
+     
+     & svg {
+       transform: scale(0.5);
+       position: absolute;
+       top: -22px;
+       left: -70px;
+ 
+     }
+   }
   }
-  .container-logo a {
+  .icon-menu {
+    display: block;
+    position:absolute;
+    right: 20px;
+    top: 40%;
     color: $main;
-    height: 80px;
-    display: flex;
-    flex: 1 1 100%;
-    position: relative;
-    & svg {
-      transform: scale(0.5);
-      position: absolute;
-      top: -22px;
-      left: 10px;
-
-    }
   }
   .box-menu ul {
     display: none;
@@ -89,6 +98,9 @@
     .container-logo {
       height: 110px;
       width: 300px;
+    }
+    .icon-menu {
+      display: none;
     }
     .container-logo a {
       color: $main;

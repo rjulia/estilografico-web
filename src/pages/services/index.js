@@ -6,14 +6,13 @@ import './services.scss'
 
 const SubmenuServices = () => {
   const { services } = useServices();
-
-
+  const servicesFiltered = _.filter(services, service => service.slug !== "equipo") 
   return (
-    <div className="container-submenu">
+    <div className="container-menu-services">
       <div className="box-submenu">
         <ul className="list-submenu">
           {
-            _.map(services, (service) => (
+            _.map(servicesFiltered, (service) => (
 
               <li  key={service.orden}>
                 <Link 
@@ -25,9 +24,7 @@ const SubmenuServices = () => {
                       id: service.sys.id
                     }
                   }} >
-                  <p className="item-number-submenu">
-                    #0{service.orden}
-                  </p>
+                  <p className="item-number-submenu">#0{service.orden}</p>
                   <p className="item-title-submenu">{service.nombre}</p>
                   <p className="item-description-submenu">{service.subtituloEnlaces}</p>
                     

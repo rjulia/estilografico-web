@@ -1,14 +1,15 @@
 @import '../../scss/variables';
 
-.container-submenu {
+.container-menu-services {
   width: 100vw;
   margin: 0 auto;
   background: $secondary;
-  height: calc(100vh - 130px);
   text-align: center;
   flex: 1;
+  padding-bottom: 80px;
   .box-submenu {
     @include container;
+    padding: 0 20px;
     margin: 0 auto;
     height: auto;
   }
@@ -22,7 +23,7 @@
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    height: 90px;
+    height: 65px;
     color: $tercery;
 
     .item-number-submenu {
@@ -38,16 +39,33 @@
 
     }
     .item-title-submenu {
-      width: 300px;
-      padding-left: 50px;
+      padding-left: 20px;
+      width: 100%;
       font-size: 24px;
       font-family: $auxB;
       text-align: left;
     }
     .item-description-submenu {
+      display:none;
       flex: 1 1 calc(100% - 350px);
       text-align: left;
 
+    }
+  }
+  @include desktop { 
+    height: calc(100vh - 130px);
+    .item-submenu {
+      height: 90px;
+      .item-number-submenu {
+        width: 35px;
+      }
+      .item-title-submenu {
+        width: 300px;
+        padding-left: 50px;
+      }
+      .item-description-submenu {
+        display: block;
+      }
     }
   }
 }

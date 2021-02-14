@@ -1,16 +1,23 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
 import { Home, Contact, Services, ServicesDetail, Team, ProjectDetail} from '../pages'
-import { Header, Footer } from '../layout'
+import { Header, Footer, MenuOverload } from '../layout'
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+
+  const onOpenMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
   return (
       <Router>
-        <Header />
+        <MenuOverload onOpenMenu={onOpenMenu} isMenuOpen={isMenuOpen}/>
+        <Header onOpenMenu={onOpenMenu}/>
         <Suspense fallback="loading">
           <Switch>
             <Route exact path="/" component={() => <Home />} />
