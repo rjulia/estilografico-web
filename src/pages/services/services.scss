@@ -25,7 +25,9 @@
     align-items: center;
     height: 65px;
     color: $tercery;
-
+    &:hover {
+      opacity: 0.6;
+    }
     .item-number-submenu {
       width: 35px;
       color: $tercery;
@@ -53,7 +55,7 @@
     }
   }
   @include desktop { 
-    height: calc(100vh - 130px);
+    padding-bottom: 80px;
     .item-submenu {
       height: 90px;
       .item-number-submenu {

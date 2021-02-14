@@ -1,0 +1,37 @@
+@import "../../../../scss/variables";
+
+
+.profile-container {
+  flex: 1 1 50%;
+  max-width: 575px;
+  background-color: $black;
+}
+
+.profile-image {
+  width: 100%;
+  overflow: hidden;
+  height: 400px;
+  img {
+    width: 100%;
+  }
+}
+
+.profile-content {
+  height: 192px;
+  padding: 20px;
+  width: 100%;
+  background-color: $secondary;
+  border-top: 8px solid $main;
+  .profile-name {
+    font-family: $text;
+    font-size: 36px;
+    color: $tercery;
+    font-weight: 700;
+  }
+  .profile-title {
+    font-family: $text;
+    font-size: 30px;
+    color: $tercery;
+    font-weight: 300;
+  }
+}

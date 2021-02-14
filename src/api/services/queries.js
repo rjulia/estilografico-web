@@ -38,6 +38,18 @@ export const serviceBySlug = (slug) => `{
       sys{
         id
       }
+      perfilesCollection(limit: 5){
+        items{
+          nombre
+          titulo
+          urlLinkedin
+          posicion
+          fotoPerfil{
+            url
+            title
+          }
+        }
+      }
       proyectosRelacionadoCollection(limit: 5){
         limit
         items {
