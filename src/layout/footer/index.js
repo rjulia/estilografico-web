@@ -3,7 +3,8 @@ import {  Link } from "react-router-dom";
 import { ReactComponent as Logo } from '../../assets/icons/logoClean.svg';
 import './footer.scss'
 
-const Footer = () => {
+const Footer = ({location}) => {
+  console.log(location)
   return (
     <div className="container-fluid-home">
       <div className="container-footer">

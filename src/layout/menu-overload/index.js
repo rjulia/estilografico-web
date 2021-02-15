@@ -16,7 +16,7 @@ const ManuOverload = ({onOpenMenu, isMenuOpen}) => {
       </div>
       <div className="box-menu-overload">
           <ul>
-            <Link 
+            <NavLink 
               activeClassName="selected" 
               className="list-menu-overload" 
               to="/"
@@ -24,8 +24,8 @@ const ManuOverload = ({onOpenMenu, isMenuOpen}) => {
               <li >
                 Home
               </li>
-            </Link>
-            <Link 
+            </NavLink>
+            <NavLink 
               activeClassName="selected" 
               className="list-menu-overload" 
               to="/equipo"
@@ -33,7 +33,7 @@ const ManuOverload = ({onOpenMenu, isMenuOpen}) => {
               <li >
                 Equipo
               </li>
-            </Link>
+            </NavLink>
             <NavLink 
               activeClassName="selected" 
               className="list-menu-overload" 

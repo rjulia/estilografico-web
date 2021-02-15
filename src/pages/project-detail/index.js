@@ -60,7 +60,7 @@ const Projectos = ({location}) => {
           listaDeImagesCollection.items.length > 0 && _.map(listaDeImagesCollection.items, (image) => (
             <div className="box-image-project-detail" key={image.url}>
               <div>
-                <img src={image.url} alt />
+                <img src={image.url || ''} alt={_.get(image,'title', '')} />
               </div>
               <div className="image-descrption-project-detail">
                 <span>{image.description}</span>

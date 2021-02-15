@@ -1,5 +1,7 @@
 import React from 'react'
 import { Formik, FieldArray } from 'formik';
+import {  Link } from "react-router-dom";
+
 import '../contact.scss'
 
 const Form = () => {
@@ -12,7 +14,7 @@ const Form = () => {
     { value: "senaletica", label: "Señalética" },
     { value: "video", label: "Video" },
     { value: "packaging", label: "Packaging" },
-    { value: "catalogo", label: "Catálogo" },
+    { value: "fotografia", label: "Fotografía" },
     { value: "expositores", label: "Expositores y Carteles" },
   ];
 
@@ -73,7 +75,7 @@ const Form = () => {
                   onBlur={handleBlur}
                   value={values.name}
                 />
-                <span>{errors.name && touched.name && errors.name}</span>
+                <span className="error">{errors.name && touched.name && errors.name}</span>
               </div>
               <div className='box-input'>
                 <label>¿Qué servicios buscas?*</label>
@@ -82,9 +84,9 @@ const Form = () => {
                   render={arrayHelpers => (
                     <div>
                       {servicesCollection.map(service => {
-                        console.log(service, values)
                        return (
                        <label key={service.value} className="checkbox-contact">
+                          <p>{service.label}</p>
                           <input
                             name="services"
                             type="checkbox"
@@ -99,27 +101,15 @@ const Form = () => {
                               }
                             }}
                           />
-                          <p>{service.label}</p>
+                          <span className="checkmark"></span>
+                          
                         </label>
                        )
                     })}
                     </div>
                   )}
                 />
-                <span>{errors.services && touched.services && errors.services}</span>
-              </div>
-              <div className='box-input'>
-                <label className="checkbox-contact">
-                  <input
-                    name="accept"
-                    type="checkbox"
-                    value={values.accept}
-                    checked={values.accept}
-                    onChange={handleChange}
-                  />
-                  <p>Acepto las condiciones del Aviso legal</p>
-                </label>
-                <span>{errors.accept && touched.accept && errors.accept}</span>
+                <span className="error">{errors.services && touched.services && errors.services}</span>
               </div>
             </div>
             <div className='right-form'>
@@ -132,7 +122,7 @@ const Form = () => {
                   onBlur={handleBlur}
                   value={values.telephone}
                 />
-                <span>{errors.telephone && touched.telephone && errors.telephone}</span>
+                <span className="error">{errors.telephone && touched.telephone && errors.telephone}</span>
               </div>
               <div className='box-input'>
                 <label>Comentario (Breve descripción)</label>
@@ -146,7 +136,20 @@ const Form = () => {
               </div>
 
             </div>
-
+          </div>
+          <div className='box-input'>
+            <label className="checkbox-contact">
+              <p>Acepto las condiciones del <Link to="/aviso-legal">Aviso legal</Link></p>
+              <input
+                name="accept"
+                type="checkbox"
+                value={values.accept}
+                checked={values.accept}
+                onChange={handleChange}
+              />
+              <span className="checkmark"></span>
+            </label>
+            <span className="error">{errors.accept && touched.accept && errors.accept}</span>
           </div>
           <button
             className='button-send-form'

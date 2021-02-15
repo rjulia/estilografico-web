@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { Home, Contact, Services, ServicesDetail, Team, ProjectDetail} from '../pages'
 import { Header, Footer, MenuOverload } from '../layout'
+import {ScrollToTop} from '../helpers'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -16,6 +17,7 @@ function App() {
   }
   return (
       <Router>
+        <ScrollToTop />
         <MenuOverload onOpenMenu={onOpenMenu} isMenuOpen={isMenuOpen}/>
         <Header onOpenMenu={onOpenMenu}/>
         <Suspense fallback="loading">
