@@ -15,7 +15,6 @@ export const getProfile = async (slug) => {
         Authorization: `Bearer ${process.env.REACT_APP_CONTENFUL_TOKEN}`,
       }
     })
-    console.log(response)
 
     return response.data
 

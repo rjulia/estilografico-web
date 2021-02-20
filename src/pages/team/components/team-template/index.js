@@ -12,8 +12,7 @@ const TeamTemplate = ({team}) => {
 
   const colorsHightLight = _.split(team.highlightsColors, ',');
   const sections = _.get(team, 'seccionesServicosCollection.items', [])
-  const profiles = _.get(team, 'perfilesCollection.items', [])
-  console.log(profiles)
+  const profiles = _.orderBy(_.get(team, 'perfilesCollection.items', []), ['posicion'], ['asc'])
   
   return (
     <div className="container-fluid-team">
@@ -29,17 +28,14 @@ const TeamTemplate = ({team}) => {
       <div className="highlight-team" style={{backgroundColor: `${colorsHightLight[0]}`}}>
         <div className="highlight-content-team">
           <div style={{color:`${colorsHightLight[1]}` }}>{documentToReactComponents(team.highlightsEs.json)}</div>
-
         </div>
       </div>
-      
       {
         _.map(sections, (section)=> <Section  key={section.titulo} section={section}/>)
       }
       <div className="highlight-team" style={{backgroundColor: 'rgb(250, 176, 121)'}}>
         <div className="highlight-content-team">
           <p>Ayudamos a tu empresa a <b>distinguirse</b> de los demás. <b>Ponemos el acento</b> en tu <b>particularidad competitiva</b>.</p>
-
         </div>
       </div>
       <div className="container-profile-team">

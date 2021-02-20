@@ -45,6 +45,7 @@ export const serviceBySlug = (slug) => `{
           titulo
           urlLinkedin
           posicion
+          slug
           fotoPerfil{
             url
             title

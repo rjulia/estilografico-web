@@ -9,7 +9,6 @@ import './profile.scss'
 
 const Profile = ({profile}) => {
 
-  console.log(profile)
   const {
     description,
     fotoPerfil,
@@ -34,9 +33,9 @@ const Profile = ({profile}) => {
           <div className="image-profile">
             <img src={_.get(fotoPerfil, 'url')} alt={_.get(fotoPerfil,'title')}/>
           </div>
-          <dvi className="highlights-profile">
+          <div className="highlights-profile">
             {frases && _.map(frases, (frase, idx) => <ContentHighlight key={idx} textQuotes ={_.get(frase, 'frase.json')}/>)}
-          </dvi>
+          </div>
 
         </div>
         <div className="colum-right-profile">

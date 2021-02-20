@@ -51,10 +51,10 @@ function Carousel({images}) {
     <div className="box-carousel">
       <Slider {...settings}>
         {
-          images && images.map((item) => {
+          images && images.map((item, idx) => {
             const colorsSlider = _.split(item.bgc, ',');
             return (
-              <div  key={item.url} >
+              <div  key={item.url + idx} >
                 <div className="content-carousel" style={{backgroundColor: `${colorsSlider[0]}`}}>
                   <div className="text-carousel" style={{color: `${colorsSlider[1]}`}}>
                     <div className="text-carousel-content">{documentToReactComponents(item.textoEs.json)}</div>

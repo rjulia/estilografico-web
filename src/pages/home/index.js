@@ -21,7 +21,8 @@ const Home = () => {
       carouselPromise
     ]).then((values) => {
       setCarouselItems(_.get(values, '[1].data.slideShowHomeCollection.items'))
-      setProjects(_.get(values, '[0].data.projectoCollection.items'))
+      const proy = _.filter(_.get(values, '[0].data.projectoCollection.items'),['enPortada', true] )
+      setProjects(proy)
       setLoading(false)
     });
   }, []);

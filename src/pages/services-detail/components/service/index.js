@@ -34,7 +34,7 @@ const Service = ({service}) => {
       </div>
       <div className="highlight-services" style={{backgroundColor: `${colorsHightLight[0]}`}}>
         <div className="highlight-content-services">
-          <div style={{color:`${colorsHightLight[1]}` }}>{documentToReactComponents(service.highlightsEs.json)}</div>
+          <div style={{color:`${colorsHightLight[1]}` }}>{documentToReactComponents(_.get(service,'highlightsEs.json',''))}</div>
 
         </div>
       </div>
