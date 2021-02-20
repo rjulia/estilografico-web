@@ -9,10 +9,12 @@
   @include container;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
 }
 
 .colunm-right-section-services {
   padding-top: 90px;
+  min-width: 340px;
 }
 
 .colunm-left-section-services {

@@ -4,7 +4,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { Home, Contact, Services, ServicesDetail, Team, ProjectDetail} from '../pages'
+import { Home, Contact, Services, ServicesDetail, Team, ProjectDetail, TeamDetail} from '../pages'
 import { Header, Footer, MenuOverload } from '../layout'
 import {ScrollToTop} from '../helpers'
 
@@ -23,6 +23,7 @@ function App() {
         <Suspense fallback="loading">
           <Switch>
             <Route exact path="/" component={() => <Home />} />
+            <Route exact path="/equipo/:slug" component={TeamDetail} />
             <Route exact path="/equipo" component={Team} />
             <Route exact path="/servicios/:slug" component={ServicesDetail} />
             <Route exact path="/servicios" component={Services} />

@@ -3,6 +3,7 @@ import React from 'react'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import {
   Section,
+  Helmet,
 } from '../../../../components'
 import './team-template.scss'
 import Profile from '../profile'
@@ -13,8 +14,14 @@ const TeamTemplate = ({team}) => {
   const sections = _.get(team, 'seccionesServicosCollection.items', [])
   const profiles = _.get(team, 'perfilesCollection.items', [])
   console.log(profiles)
+  
   return (
     <div className="container-fluid-team">
+      <Helmet 
+        title={team.nombre}
+        description={team.descripcionEs}
+        keywords={team.palabrasClave}
+        />
       <div className="box-title-team">
         <h1 className="title-team">{team.nombre}</h1>
         <p className="description-team">{team.descripcionEs}</p>      

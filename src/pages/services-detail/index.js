@@ -5,14 +5,14 @@ import { Spinner } from '../../components';
 import Service from './components/service'
 
 const ServicesDetail = ({location}) => {
-  const { service, apiGetService } = useServices();
+  const { service, apiGetService, loading } = useServices();
   const slug = _.last(_.split(location.pathname, '/'))
 
   useEffect(() => {
     apiGetService(slug)
   }, [slug])
 
-  if (_.isEmpty(service)) {
+  if (loading) {
     return <Spinner />
   }
   return (

@@ -37,33 +37,33 @@ export const queryProject = (slug) => {
       limit:1) {
         items{
           titulo
-        subtitulo
-        slug
-        portada {
-          url
-          title
-          description
-          width
-          height
-        }
-        contenido {
-          json
-        }
-        listaDeVideos
-        listaDeObjectivos
-        listaDeImagesCollection{
-          limit
-          total
-          items{
+          subtitulo
+          slug
+          palabrasClave
+          portada {
+            url
             title
             description
             width
             height
-            url
           }
+          contenido {
+            json
+          }
+          listaDeVideos
+          listaDeObjectivos
+          listaDeImagesCollection{
+            limit
+            total
+            items{
+              title
+              description
+              width
+              height
+              url
+            }
           }
         }
-        
       }
     }
   `

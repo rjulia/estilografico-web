@@ -1,9 +1,9 @@
 import _ from 'lodash'
 import React, {useEffect, useState} from 'react'
 import ReactPlayer from 'react-player'
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { getProject } from '../../api/projects/request'
-import { Spinner } from '../../components';
+import { Spinner, Helmet } from '../../components'
 import './project-detail.scss'
 
 const Projectos = ({location}) => {
@@ -26,11 +26,17 @@ const Projectos = ({location}) => {
     listaDeObjectivos,
     listaDeImagesCollection,
     subtitulo,
-    titulo
+    titulo,
+    palabrasClave,
   } = project
 
   return (
     <div className="container-fluid-project-detail">
+      <Helmet 
+        title={titulo}
+        description={subtitulo}
+        keywords={palabrasClave}
+        />
       <div className="header-image-project-detail">
         <div
           className="container-box-image-project-detail"

@@ -2,7 +2,6 @@ import axios from 'axios'
 import { queryProjects, queryProject } from './queries'
 import { url } from '../../constants'
 
-
 export const getProjects = async () => {
   try {
     const response = await axios({

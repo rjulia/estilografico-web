@@ -2,12 +2,18 @@ import React from 'react'
 import './contact.scss'
 import Map from './googleMap'
 import Form from './form'
+import { Helmet } from '../../components'
 
 
 
 const Contact = () => {
   return (
     <div className="container-fluid-contact">
+      <Helmet 
+        title="Contacto"
+        description=""
+        keywords=""
+        />
       <div className="container-contact container-header-contact">
         <h1>Contact</h1>
         <p>Hola. ¿Cómo podemos ayudarte?

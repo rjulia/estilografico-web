@@ -31,6 +31,7 @@ export const serviceBySlug = (slug) => `{
       slug
       nombre
       descripcionEs
+      palabrasClave
       highlightsEs {
         json
       }

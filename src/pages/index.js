@@ -4,6 +4,7 @@ import Services from './services'
 import ServicesDetail from './services-detail'
 import ProjectDetail from './project-detail'
 import Team from './team'
+import TeamDetail from './team-detail'
 
 export {
   Contact,
@@ -11,5 +12,6 @@ export {
   Services,
   ServicesDetail,
   ProjectDetail,
-  Team
+  Team,
+  TeamDetail
 }

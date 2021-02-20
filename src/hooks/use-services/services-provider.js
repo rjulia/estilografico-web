@@ -15,6 +15,7 @@ export default function ServicesProvider({ children }) {
 
   const apiGetService = (slug) => {
     console.log('apiGetService', slug)
+    setService({})
     setLoading(true)
     getQueryService(slug).then((response) => {
       setCurrentId(_.get(response, 'data.servicioCollection.items[0].sys.id'))
@@ -24,15 +25,15 @@ export default function ServicesProvider({ children }) {
     })
   }
   
-  useEffect(() => {
-    const getNextserviceId = () => {
-      const idx = _.findIndex(services, {id: currentId - 1})
-      setLoading(true)
-      const next = services[idx]
-      setNextservice(next)
-    }
-    getNextserviceId(currentId)
-  }, [currentId, services])
+  // useEffect(() => {
+  //   const getNextserviceId = () => {
+  //     const idx = _.findIndex(services, {id: currentId - 1})
+  //     setLoading(true)
+  //     const next = services[idx]
+  //     setNextservice(next)
+  //   }
+  //   getNextserviceId(currentId)
+  // }, [currentId, services])
 
   
   useEffect(() => {

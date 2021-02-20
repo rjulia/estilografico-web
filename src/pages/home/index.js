@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { getProjects } from '../../api/projects/request'
 import { getCarouselHome } from '../../api/slider/request'
 import logoMarron from '../../assets/images/logo-marron.jpg'
-import { BoxProject, Carousel, Spinner } from '../../components'
+import { BoxProject, Carousel, Spinner, Helmet } from '../../components'
 import './home.scss'
 
 const Home = () => {
@@ -30,6 +30,13 @@ const Home = () => {
 
   return (
     <div className="container-fluid-home">
+      <Helmet 
+        title="Estilográfico || Estudio de Comunicación, Diseño gráfico y Publicidad a medida en Eibar
+        "
+        description="Estudio de Comunicación, Diseño gráfico y Publicidad a medida en Eibar
+        "
+        keywords=""
+        />
       <Carousel images={carouselItems}/> 
       <div className="container-fluid-home-block block-1">
         <div>
