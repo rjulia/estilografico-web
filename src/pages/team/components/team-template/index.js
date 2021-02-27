@@ -33,9 +33,9 @@ const TeamTemplate = ({team}) => {
       {
         _.map(sections, (section)=> <Section  key={section.titulo} section={section}/>)
       }
-      <div className="highlight-team" style={{backgroundColor: 'rgb(250, 176, 121)'}}>
+      <div className="highlight-team" style={{backgroundColor: `${colorsHightLight[0]}`}}>
         <div className="highlight-content-team">
-          <p>Ayudamos a tu empresa a <b>distinguirse</b> de los demás. <b>Ponemos el acento</b> en tu <b>particularidad competitiva</b>.</p>
+          <p style={{color:`${colorsHightLight[1]}` }}>Ayudamos a tu empresa a <b>distinguirse</b> de los demás. <b>Ponemos el acento</b> en tu <b>particularidad competitiva</b>.</p>
         </div>
       </div>
       <div className="container-profile-team">

@@ -20,9 +20,9 @@
     color: $text_color;
     font-family: $auxL;
     flex: 1;
-    font-size:36px;
+    font-size:32px;
     line-height:42px;
-    margin: 60px 0;
+    margin: 30px 0;
     b{
       font-family: $auxB;
     }
@@ -55,6 +55,15 @@
       line-height: 20px;
       margin-bottom: 15px;
       margin-top: 40px;
+    }
+    @include desktop {  
+      font-size:36px;
+      margin: 60px 0;
+
+      h4 {
+        font-size: 22px;
+        line-height: 26px;
+      }
     }
   }
 

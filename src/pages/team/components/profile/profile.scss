@@ -4,7 +4,7 @@
 .profile-container {
   flex: 1 1 50%;
   max-width: 575px;
-  padding: 0 20px;
+  padding: 20px 20px;
 }
 
 .profile-box{
@@ -28,8 +28,12 @@
   width: 100%;
   overflow: hidden;
   height: 440px;
+  position: relative;
   img {
     width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

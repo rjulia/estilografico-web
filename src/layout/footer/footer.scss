@@ -71,18 +71,25 @@
     .box-logo-footer {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-  
+      justify-content: center;
+      align-items: center;
+      & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
       & svg {
         color: $grey_dark;
+        display: inline;
+        position: relative;
         transform: scale(0.5) translate(-188px, 10px);
       }
     }
   
     .box-info-footer {
       display: flex;
-      padding: 20px 0;
+      padding: 20px;
       & div {
         flex: 1 1 100%;
       }
@@ -117,6 +124,7 @@
       flex-direction: row;
       .box-info-footer {
         width: 544px;
+        padding: 20px 0;
       }
       .box-logo-footer {
         display: flex;
