@@ -15,7 +15,7 @@ const Contact = () => {
         keywords=""
         />
       <div className="container-contact container-header-contact">
-        <h1>Contact</h1>
+        <h1>Contacto</h1>
         <p>Hola. ¿Cómo podemos ayudarte?
 Estaremos encantados de conocerte. Estás muy cerca de contactar con nosotros. ¡Envíanos tus datos y nos pondremos en contacto contigo!</p>
       </div>

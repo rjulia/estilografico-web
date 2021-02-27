@@ -16,13 +16,16 @@
 }
 
 .box-button-navigation {
-  width: 72px;
-  height: 72px;
+  width: 77px;
+  height: 77px;
   background-color: $tercery;
-  padding:5px;
+  padding:10px;
   color: $main;
   display: flex;
   align-items: center;
   justify-content: center;
+  &.turned {
+    transform: rotate(-90deg)
+  }
 
 }

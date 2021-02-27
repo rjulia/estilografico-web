@@ -26,6 +26,7 @@ const NavigationService = () => {
           <ButtonNavigation
           icon={ArrowUp}
           title="VOLVER"
+          turn
           onClick={goToBack}/>
         </li>
         <li>
