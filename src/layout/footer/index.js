@@ -36,10 +36,10 @@ const Footer = ({location}) => {
             </div>
             <div>
               <h3>INFORMACION:</h3>
-              <Link to="/pages" >
+              <Link to="/paguina/cookies" >
                 <p>Política de cookies</p>
               </Link>
-              <Link to="/pages">
+              <Link to="/paguina/aviso-legal">
                 <p>Aviso legal</p>
               </Link>
             </div>

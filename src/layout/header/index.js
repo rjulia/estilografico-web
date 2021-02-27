@@ -17,7 +17,7 @@ const Header = ({onOpenMenu}) => {
         <div className="icon-menu" onClick={onOpenMenu}>
           <MenuIcon />
         </div>
-        <div className="box-menu">
+        <nav className="box-menu">
           <ul>
             <NavLink activeClassName="selected" className="list-menu" to="/equipo">
               <li>
@@ -35,7 +35,7 @@ const Header = ({onOpenMenu}) => {
               </li>
             </NavLink>
           </ul>
-        </div>
+        </nav>
       </div>
     </div>
   )

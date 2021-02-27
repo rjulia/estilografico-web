@@ -4,7 +4,16 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { Home, Contact, Services, ServicesDetail, Team, ProjectDetail, TeamDetail} from '../pages'
+import { 
+  Home, 
+  Contact, 
+  Services, 
+  ServicesDetail, 
+  Team, 
+  ProjectDetail, 
+  TeamDetail,
+  Page
+} from '../pages'
 import { Header, Footer, MenuOverload } from '../layout'
 import {ScrollToTop} from '../helpers'
 
@@ -29,6 +38,7 @@ function App() {
             <Route exact path="/servicios" component={Services} />
             <Route exact path="/proyectos/:slug" component={ProjectDetail} />
             <Route exact path="/contacto" component={Contact} />
+            <Route exact path="/paguina/:slug" component={Page} />
           </Switch>
         </Suspense>
         <Footer />
