@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import React, {useEffect, useState} from 'react'
 import ReactPlayer from 'react-player'
+import { Link } from "react-router-dom"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { getProject } from '../../api/projects/request'
 import { Spinner, Helmet } from '../../components'
@@ -28,8 +29,15 @@ const Projectos = ({location}) => {
     subtitulo,
     titulo,
     palabrasClave,
+    trabajosRelacionadosCollection,
   } = project
-
+  const relatedJobs = _.map(trabajosRelacionadosCollection.items, (job)=>{
+    return {
+      title: _.get(job, 'titulo'),
+      category: _.get(job, 'linkedFrom.servicioCollection.items[0].nombre'),
+      slug: _.get(job, 'slug')
+    }
+  })
   return (
     <div className="container-fluid-project-detail">
       <Helmet 
@@ -51,7 +59,7 @@ const Projectos = ({location}) => {
         <div className="list-objectives-project-detail">
           <ul >
             {
-              listaDeObjectivos > 0 && _.map(listaDeObjectivos, objectivo => (
+              listaDeObjectivos && listaDeObjectivos.length > 0 && _.map(listaDeObjectivos, objectivo => (
                 <li key={objectivo}>{objectivo}</li>
               ))
             }
@@ -84,6 +92,35 @@ const Projectos = ({location}) => {
           ))
         }
       </div>
+      {
+        relatedJobs.length > 0 && (
+          <div className="list-related-project-detail">
+            <h3 className="title-related-project-detail">
+              TRABAJOS RELACIONADOS
+            </h3>
+            {
+              _.map(relatedJobs, (relatedJob, idx) => (
+                <Link
+                  key={`key-related-relatedJob-${idx}`}
+                  style={{textDecoration: 'none'}} 
+                  to={{
+                    pathname: `/proyectos/${relatedJob.slug}`,
+                    // state: {
+                    //   id: service.sys.id
+                    // }
+                  }} >
+                    <p
+                      
+                      className="text-related-project-detail">
+                      <span>{_.get(relatedJob, 'category')}: </span>
+                      <span>{_.get(relatedJob, 'title')}</span>
+                    </p>
+                  </Link>
+                ))
+            }
+          </div>
+        )
+      }
   
     </div>
   )

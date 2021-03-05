@@ -52,6 +52,20 @@ export const queryProject = (slug) => {
           }
           listaDeVideos
           listaDeObjectivos
+          trabajosRelacionadosCollection {
+            items {
+              titulo
+              slug
+              linkedFrom {
+                servicioCollection{
+                  items {
+                    nombre
+                    
+                  }
+                }
+              }
+            }
+          }
           listaDeImagesCollection{
             limit
             total

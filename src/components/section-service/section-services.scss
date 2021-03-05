@@ -22,8 +22,10 @@
 }
 
 .colunm-right-section-services {
-  padding-top: 90px;
-  min-width: 340px;
+  @include desktop { 
+    padding-top: 90px;
+    min-width: 340px; 
+  }
 }
 
 .colunm-left-section-services {
