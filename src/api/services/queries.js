@@ -39,7 +39,7 @@ export const serviceBySlug = (slug) => `{
       sys{
         id
       }
-      perfilesCollection(limit: 5){
+      perfilesCollection(limit: 6){
         items{
           nombre
           titulo
@@ -49,6 +49,11 @@ export const serviceBySlug = (slug) => `{
           fotoPerfil{
             url
             title
+          }
+          fotoFerfilHover {
+            url
+            title
+            description
           }
         }
       }

@@ -25,6 +25,11 @@ export const profileBySlug = (slug) => `{
         title
         description
       }
+      fotoFerfilHover {
+        url
+        title
+        description
+      }
     }
   }
 }
