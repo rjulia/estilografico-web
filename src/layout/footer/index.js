@@ -1,10 +1,24 @@
-import React from 'react'
+import _ from 'lodash'
+import React, {useMemo, useState, useEffect} from 'react'
 import {  Link } from "react-router-dom";
 import { ReactComponent as Logo } from '../../assets/icons/logoClean.svg';
 import './footer.scss'
+import { getPages } from '../../api/pages/request'
 
 const Footer = ({location}) => {
-  console.log(location)
+  const [pages, setPages] = useState([])
+
+  const getAllPages = useMemo(() => function() {
+    console.log('hey performace')
+    getPages().then((response) => {
+      setPages(_.get(response, 'data.pageCollection.items'))
+    })
+  }, [])
+
+  useEffect(() => {
+    getAllPages()
+  }, [])
+
   return (
     <div className="container-fluid-home">
       <div className="container-footer">
@@ -36,12 +50,16 @@ const Footer = ({location}) => {
             </div>
             <div>
               <h3>INFORMACION:</h3>
-              <Link to="/paguina/cookies" >
-                <p>Política de cookies</p>
-              </Link>
-              <Link to="/paguina/aviso-legal">
-                <p>Aviso legal</p>
-              </Link>
+              { 
+                pages && _.map(pages, (page) => (
+                  <Link
+                    key={_.get(page, 'slug')}
+                    to={`/paguina/${page.slug}`}>
+                    <p>{_.get(page, 'titulo')}</p>
+                  </Link>
+
+                ))
+              }
             </div>
           </div>
         </div>

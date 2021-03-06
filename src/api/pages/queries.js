@@ -14,3 +14,17 @@ export const pageBySlug = (slug) => `{
   }
 }
 `
+
+export const pagesQuery = `{
+  pageCollection 
+  (
+    limit: 10,
+    order: titulo_ASC,
+  ){
+    items{
+      slug
+      titulo
+    }
+  }
+}
+`
