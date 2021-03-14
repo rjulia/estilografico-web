@@ -38,11 +38,21 @@
 }
 
 .profile-content {
+  position: relative;
   height: 192px;
   padding: 20px;
   width: 100%;
   background-color: $secondary;
   border-top: 8px solid $main;
+  .profile-linkedin {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    img {
+      max-width: 40px;
+    }
+  }
   .profile-name {
     font-family: $text;
     font-size: 36px;

@@ -78,6 +78,11 @@
     p {
       font-size: 18px;
       line-height: 22px;
+      margin-bottom: 20px;
+    }
+    a {
+      color: $main;
+      cursor: pointer;
     }
   }
 
@@ -161,8 +166,11 @@
     .box-image-project-detail {
       flex: 1 1 50%;
       margin-bottom: 30px;
+      max-width: 1210px;
+      flex-wrap: wrap;
       & img {
         width: auto;
+        // max-width: 100%;
       }
     }
     .image-descrption-project-detail {

@@ -20,7 +20,7 @@ const Service = ({service}) => {
     descripcionEs,
     palabrasClave
   } = service
-
+  console.log(service)
   return (
     <div className="container-fluid-services">
       <Helmet 
@@ -44,7 +44,7 @@ const Service = ({service}) => {
       }
       <RelatedProjects 
         projects={_.get(service, 'proyectosRelacionadoCollection.items')}
-        name={_.get(service,'nombre')}
+        phrase={_.get(service,'fraseProjectos')}
         />
       <Navigation />
 

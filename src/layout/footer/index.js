@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import React, {useMemo, useState, useEffect} from 'react'
-import {  Link } from "react-router-dom";
+import {  Link } from "react-router-dom"
 import { ReactComponent as Logo } from '../../assets/icons/logoClean.svg';
 import './footer.scss'
 import { getPages } from '../../api/pages/request'
@@ -17,7 +17,7 @@ const Footer = ({location}) => {
 
   useEffect(() => {
     getAllPages()
-  }, [])
+  }, [getAllPages])
 
   return (
     <div className="container-fluid-home">
@@ -46,7 +46,7 @@ const Footer = ({location}) => {
             </div>
             <div>
               <h3>SÍGUENOS:</h3>
-              <a href="https://www.w3schools.com">Linkedin</a>
+              <a href="https://www.linkedin.com/company/estilografico/">Linkedin</a>
             </div>
             <div>
               <h3>INFORMACION:</h3>

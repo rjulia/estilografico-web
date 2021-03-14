@@ -1,6 +1,6 @@
 export const queryCarouselHome = `
 {
-  slideShowHomeCollection (order: sys_publishedAt_ASC) {
+  slideShowHomeCollection (order: order_ASC) {
     total
     items {
       order,

@@ -27,6 +27,9 @@
           line-height:24px;
           margin: 5px 0;
           color: inherit;
+          &:first-child {
+            font-family: $auxL;
+          }
         }
         h2 {
           font-weight: 400;
@@ -34,6 +37,7 @@
           line-height:28px;
           margin: 15px 0;
           color: inherit;
+          font-family: $auxB;
         }
 
     } 
@@ -86,7 +90,7 @@
       text-align: left;
       
       .text-carousel-content {
-        width: 80%;
+        width: 75%;
         padding-top: 0;
         padding-right: 200px;
         position: relative;

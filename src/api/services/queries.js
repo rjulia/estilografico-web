@@ -35,6 +35,9 @@ export const serviceBySlug = (slug) => `{
       highlightsEs {
         json
       }
+      fraseProjectos {
+        json
+      }
       highlightsColors
       sys{
         id
