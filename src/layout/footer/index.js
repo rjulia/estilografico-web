@@ -1,14 +1,14 @@
 import _ from 'lodash'
-import React, {useMemo, useState, useEffect} from 'react'
-import {  Link } from "react-router-dom"
+import React, { useMemo, useState, useEffect } from 'react'
+import { Link } from "react-router-dom"
 import { ReactComponent as Logo } from '../../assets/icons/logoClean.svg';
 import './footer.scss'
 import { getPages } from '../../api/pages/request'
 
-const Footer = ({location}) => {
+const Footer = ({ location }) => {
   const [pages, setPages] = useState([])
 
-  const getAllPages = useMemo(() => function() {
+  const getAllPages = useMemo(() => function () {
     console.log('hey performace')
     getPages().then((response) => {
       setPages(_.get(response, 'data.pageCollection.items'))
@@ -33,7 +33,10 @@ const Footer = ({location}) => {
         <div className="box-footer">
           <div className="box-logo-footer">
             <div>
-              <Logo/>
+              <Link
+                to={`/`}>
+                <Logo />
+              </Link>
             </div>
             <p className="box-logo-footer-copyright">Copyright<span>©</span>ESTILOGRÁFICO</p>
           </div>
@@ -50,7 +53,7 @@ const Footer = ({location}) => {
             </div>
             <div>
               <h3>INFORMACION:</h3>
-              { 
+              {
                 pages && _.map(pages, (page) => (
                   <Link
                     key={_.get(page, 'slug')}

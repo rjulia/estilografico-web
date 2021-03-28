@@ -4,18 +4,18 @@ import ReactPlayer from 'react-player'
 import { Link } from "react-router-dom"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { getProject } from '../../api/projects/request'
-import { Spinner, Helmet } from '../../components'
+import { Spinner, Helmet, Navigation } from '../../components'
 import './project-detail.scss'
 
 const Projectos = ({location}) => {
   const [project, setProject] = useState({})
   const slug = _.last(_.split(location.pathname, '/'))
-  console.log('hello')
   useEffect(() => {
+    console.log('hello', slug, location)
     getProject(slug).then((response) => {
       setProject(_.get(response, 'data.projectoCollection.items[0]'))
     })
-  }, [slug])
+  }, [location, slug])
 
   if (_.isEmpty(project)) {
     return <Spinner />
@@ -31,9 +31,10 @@ const Projectos = ({location}) => {
     palabrasClave,
     trabajosRelacionadosCollection,
   } = project
+  console.log(project, trabajosRelacionadosCollection)
   const relatedJobs = _.map(trabajosRelacionadosCollection.items, (job)=>{
     return {
-      title: _.get(job, 'titulo'),
+      title: _.get(job, 'subtituloEnlace'),
       category: _.get(job, 'linkedFrom.servicioCollection.items[0].nombre'),
       slug: _.get(job, 'slug')
     }
@@ -92,6 +93,7 @@ const Projectos = ({location}) => {
           ))
         }
       </div>
+      <Navigation />
       {
         relatedJobs.length > 0 && (
           <div className="list-related-project-detail">

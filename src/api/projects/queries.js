@@ -54,7 +54,7 @@ export const queryProject = (slug) => {
           listaDeObjectivos
           trabajosRelacionadosCollection {
             items {
-              titulo
+              subtituloEnlace
               slug
               linkedFrom {
                 servicioCollection{

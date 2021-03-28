@@ -81,8 +81,9 @@
       margin-bottom: 20px;
     }
     a {
-      color: $main;
+      color: #d65a50;
       cursor: pointer;
+      text-decoration: underline;
     }
   }
 
@@ -176,9 +177,9 @@
     .image-descrption-project-detail {
       font-size: 16px;
       line-height: 20px;
-      padding-top: 5px;
-      padding-left: 0;
-      padding-right: 0;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 }
