@@ -15,7 +15,6 @@ const Profile = ({profile}) => {
     frasesDestacadasCollection,
     listaDeHabilidades,
     nombre,
-    urlLinkedin,
   } = profile
 
   const frases = _.get(frasesDestacadasCollection, 'items', [])

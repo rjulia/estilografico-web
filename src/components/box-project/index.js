@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './box-project.scss';
 
 const BoxProject = ({
@@ -9,7 +9,6 @@ const BoxProject = ({
   const {
     titulo,
     subtitulo,
-    id,
     slug,
     portada
   } = project

@@ -7,7 +7,7 @@ export default function ServicesProvider({ children }) {
   // internal state
   const [services, setServices] = useState({})
   const [service, setService] = useState({})
-  const [nextservice, setNextservice] = useState({})
+  const [nextservice] = useState({})
 
   const [loading, setLoading] = useState(false)
   const [currentId, setCurrentId] = useState(0)
