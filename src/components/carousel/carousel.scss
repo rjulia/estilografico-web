@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 120px);
     min-height: -webkit-fill-available;
   }
   .text-carousel {
@@ -19,7 +19,7 @@
     
     .text-carousel-content {
       position: absolute;
-      bottom: 0;
+      bottom: 40px;
       padding: 15px;
         p {
           font-weight: 300;
@@ -75,6 +75,7 @@
       display: flex;
       position: relative;
       height: 530px;
+      min-height: auto;
     }
     .image-carousel {
       position: absolute;

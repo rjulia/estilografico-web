@@ -29,7 +29,7 @@ Estaremos encantados de conocerte. Estás muy cerca de contactar con nosotros. �
           <h2>ESTILOGRÁFICO</h2>
           <p>Estudio de Comunicación, Diseño gráfico y Publicidad a medida.</p>
           <br />
-          <p>Tel. 943 82 13 00</p>
+          <p className="phone">Tel. 943 82 13 00</p>
           <br />
           <p>info@estilografico.com</p>
           <br />

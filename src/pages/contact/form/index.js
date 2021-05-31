@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Formik, FieldArray } from 'formik';
 import {  Link } from "react-router-dom";
 
@@ -18,6 +18,18 @@ const Form = () => {
     { value: "expositores", label: "Expositores y Carteles" },
   ];
 
+  useEffect(() => {
+    const script = document.createElement('script');
+  
+    script.src = "https://use.typekit.net/foobar.js";
+    script.async = true;
+  
+    document.body.appendChild(script);
+  
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
 
   return (
     <Formik
@@ -155,7 +167,7 @@ const Form = () => {
             className='button-send-form'
             type="submit"
             disabled={isSubmitting}>
-            Submit
+            Enviar
           </button>
         </form>
       )}

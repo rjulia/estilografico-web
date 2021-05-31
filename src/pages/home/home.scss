@@ -20,6 +20,11 @@
   }
   &.block-2 {
     background-color: $blue;
+    a {
+      color: #d65a50;
+      text-decoration: underline;
+      font-weight: 600;
+    }
   }
   &.block-3 {
     background-color: $orange;
@@ -42,6 +47,13 @@
     & h2 {
       font-size: 48px;
 
+    }
+  }
+  .box-design {
+    a {
+      color: #d65a50;
+      text-decoration: underline;
+      font-weight: 600;
     }
   }
 }

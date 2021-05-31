@@ -191,10 +191,13 @@
 .list-related-project-detail {
   text-align: center;
   padding-bottom: 60px;
+  a {
+    line-height: 24px
+  }
 }
 
 .title-related-project-detail {
-  font-size: 24px;
+  font-size: 36px;
   font-family: $aux;
   color: $tercery_light;
   margin: 25px 0;
