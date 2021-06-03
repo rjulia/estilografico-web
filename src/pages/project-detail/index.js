@@ -93,7 +93,7 @@ const Projectos = ({location}) => {
           ))
         }
       </div>
-      <Navigation />
+      
       {
         relatedJobs.length > 0 && (
           <div className="list-related-project-detail">
@@ -123,6 +123,7 @@ const Projectos = ({location}) => {
           </div>
         )
       }
+      <Navigation />
   
     </div>
   )

@@ -18,18 +18,18 @@ const Form = () => {
     { value: "expositores", label: "Expositores y Carteles" },
   ];
 
-  useEffect(() => {
-    const script = document.createElement('script');
+  // useEffect(() => {
+  //   const script = document.createElement('script');
   
-    script.src = "https://use.typekit.net/foobar.js";
-    script.async = true;
+  //   script.src = "https://www.google.com/recaptcha/api.js";
+  //   script.async = true;
   
-    document.body.appendChild(script);
+  //   document.body.appendChild(script);
   
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, []);
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   }
+  // }, []);
 
   return (
     <Formik
