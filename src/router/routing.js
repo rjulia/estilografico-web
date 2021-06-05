@@ -25,7 +25,7 @@ function App() {
     setIsMenuOpen(!isMenuOpen)
   }
   return (
-      <Router>
+      <Router >
         <ScrollToTop />
         <MenuOverload onOpenMenu={onOpenMenu} isMenuOpen={isMenuOpen}/>
         <Header onOpenMenu={onOpenMenu}/>
