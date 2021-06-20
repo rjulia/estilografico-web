@@ -17,7 +17,7 @@ export const getQueryServices = async () => {
     })
     return response.data
   } catch (error) {
-    console.log("error", error);
+    console.error("error", error);
   }
 }
 
@@ -34,12 +34,12 @@ export const getQueryService = async (slug) => {
         Authorization: `Bearer ${process.env.REACT_APP_CONTENFUL_TOKEN}`,
       }
     })
-    console.log(response)
+    console.error(response)
 
     return response.data
 
 
   } catch (error) {
-    console.log("error", error);
+    console.error("error", error);
   }
 }

@@ -20,7 +20,7 @@ export const getPage = async (slug) => {
 
 
   } catch (error) {
-    console.log("error", error);
+    console.error("error", error);
   }
 }
 
@@ -42,6 +42,6 @@ export const getPages = async () => {
 
 
   } catch (error) {
-    console.log("error", error);
+    console.error("error", error);
   }
 }

@@ -11,7 +11,7 @@ const Projectos = ({location}) => {
   const [project, setProject] = useState({})
   const slug = _.last(_.split(location.pathname, '/'))
   useEffect(() => {
-    console.log('hello', slug, location)
+
     getProject(slug).then((response) => {
       setProject(_.get(response, 'data.projectoCollection.items[0]'))
     })
@@ -31,7 +31,7 @@ const Projectos = ({location}) => {
     palabrasClave,
     trabajosRelacionadosCollection,
   } = project
-  console.log(project, trabajosRelacionadosCollection)
+
   const relatedJobs = _.map(trabajosRelacionadosCollection.items, (job)=>{
     return {
       title: _.get(job, 'subtituloEnlace'),

@@ -55,7 +55,7 @@ const Form = () => {
         if (!values.accept) {
           errors.accept = 'Tiene que aceptar las condiciones de aviso legal';
         }
-        console.log(errors);
+        console.error(errors);
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {

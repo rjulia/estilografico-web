@@ -20,7 +20,7 @@ const Service = ({service}) => {
     descripcionEs,
     palabrasClave
   } = service
-  console.log(service)
+
   return (
     <div className="container-fluid-services">
       <Helmet 

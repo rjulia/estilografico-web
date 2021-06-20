@@ -19,7 +19,7 @@ export const getProjects = async () => {
 
 
   } catch (error) {
-    console.log("error", error);
+    console.error("error", error);
   }
 }
 
@@ -36,12 +36,11 @@ export const getProject = async (slug) => {
         Authorization: `Bearer ${process.env.REACT_APP_CONTENFUL_TOKEN}`,
       }
     })
-    console.log(response)
 
     return response.data
 
 
   } catch (error) {
-    console.log("error", error);
+    console.error("error", error);
   }
 }

@@ -20,6 +20,6 @@ export const getCarouselHome = async () => {
 
 
   } catch (error) {
-    console.log("error", error);
+    console.error("error", error);
   }
 }

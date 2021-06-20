@@ -5,7 +5,6 @@ import BoxProject from '../box-project'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const RelatedProjects = ({projects, phrase}) => {
-  console.log(projects, phrase)
   return (
     <div className="container-home-projects">
       <div className="box-title-projects">

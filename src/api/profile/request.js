@@ -20,6 +20,6 @@ export const getProfile = async (slug) => {
 
 
   } catch (error) {
-    console.log("error", error);
+    console.error("error", error);
   }
 }

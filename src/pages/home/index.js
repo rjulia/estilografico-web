@@ -34,9 +34,10 @@ const Home = () => {
   return (
     <div className="container-fluid-home">
       <Helmet 
-        title="Estilográfico || Estudio de Comunicación, Diseño gráfico y Publicidad a medida en Eibar
+        title="EstiloGráfico: Diseño y Publicidad: Logo, Web, Rótulo
         "
-        description="Estudio de Comunicación, Diseño gráfico y Publicidad a medida en Eibar
+        description="Diseño gráfico y Publicidad en Eibar, Gipuzkoa. Diseñamos y promocionamos tu marca, página
+        web, catálogo, rótulo de fachada, fotografía, video
         "
         keywords=""
         />

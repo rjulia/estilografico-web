@@ -9,7 +9,7 @@ const Footer = ({ location }) => {
   const [pages, setPages] = useState([])
 
   const getAllPages = useMemo(() => function () {
-    console.log('hey performace')
+
     getPages().then((response) => {
       setPages(_.get(response, 'data.pageCollection.items'))
     })

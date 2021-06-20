@@ -14,7 +14,6 @@ export default function ServicesProvider({ children }) {
   const [totalservices, setTotalservices] = useState(0)
 
   const apiGetService = (slug) => {
-    console.log('apiGetService', slug)
     setService({})
     setLoading(true)
     getQueryService(slug).then((response) => {
