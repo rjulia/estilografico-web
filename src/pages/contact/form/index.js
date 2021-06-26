@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import { Formik, FieldArray } from 'formik';
 import {  Link } from "react-router-dom";
-
+import axios from 'axios';
 import '../contact.scss'
+const API_PATH = './api/index.php';
 
 const Form = () => {
 
@@ -59,6 +60,17 @@ const Form = () => {
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
+        
+          axios({
+            method: 'post',
+            url: `${API_PATH}`,
+            headers: { 'content-type': 'application/json' },
+            data: values
+          }).then(result => {
+            console.log("Sent email")
+          }).catch(error => alert(error));
+    
+        
         setTimeout(() => {
           alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
