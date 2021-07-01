@@ -57,7 +57,7 @@ const Footer = ({ location }) => {
                 pages && _.map(pages, (page) => (
                   <Link
                     key={_.get(page, 'slug')}
-                    to={`/paguina/${page.slug}`}>
+                    to={`/pagina/${page.slug}`}>
                     <p>{_.get(page, 'titulo')}</p>
                   </Link>
 

@@ -12,7 +12,8 @@ import {
   Team, 
   ProjectDetail, 
   TeamDetail,
-  Page
+  Page,
+  NotFound
 } from '../pages'
 import { Header, Footer, MenuOverload } from '../layout'
 import {ScrollToTop} from '../helpers'
@@ -38,7 +39,8 @@ function App() {
             <Route exact path="/servicios" component={Services} />
             <Route exact path="/proyectos/:slug" component={ProjectDetail} />
             <Route exact path="/contacto" component={Contact} />
-            <Route exact path="/paguina/:slug" component={Page} />
+            <Route exact path="/pagina/:slug" component={Page} />
+            <Route component={NotFound} />
           </Switch>
         </Suspense>
         <Footer />

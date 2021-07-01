@@ -6,6 +6,7 @@ import Page from './page'
 import ProjectDetail from './project-detail'
 import Team from './team'
 import TeamDetail from './team-detail'
+import NotFound from './404'
 
 export {
   Contact,
@@ -15,5 +16,6 @@ export {
   Page,
   ProjectDetail,
   Team,
-  TeamDetail
+  TeamDetail,
+  NotFound
 }

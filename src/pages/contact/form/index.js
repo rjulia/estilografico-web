@@ -68,11 +68,11 @@ const Form = () => {
             data: values
           }).then(result => {
             console.log("Sent email")
-          }).catch(error => alert(error));
+          }).catch(error => console.log(error));
     
         
         setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
+          // alert(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 400);
       }}
@@ -163,7 +163,7 @@ const Form = () => {
           </div>
           <div className='box-input'>
             <label className="checkbox-contact">
-              <p>Acepto las condiciones del <Link to="/aviso-legal">Aviso legal</Link></p>
+              <p>Acepto las condiciones del <Link to="pagina/aviso-legal">Aviso legal</Link></p>
               <input
                 name="accept"
                 type="checkbox"
