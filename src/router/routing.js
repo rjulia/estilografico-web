@@ -18,6 +18,10 @@ import {
 import { Header, Footer, MenuOverload } from '../layout'
 import {ScrollToTop} from '../helpers'
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-96451428-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
